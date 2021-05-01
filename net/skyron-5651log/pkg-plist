@@ -1,9 +1,4 @@
 pkg/5651log.xml
-pkg/5651log/5651log_api.inc
-pkg/5651log/wg_globals.inc
-pkg/5651log/wg_install.inc
-pkg/5651log/wg_validate.inc
-pkg/5651log/wg.inc
 www/shortcuts/pkg_5651log.inc
 www/imzalar/index.php
 www/imzalar/manager.php
