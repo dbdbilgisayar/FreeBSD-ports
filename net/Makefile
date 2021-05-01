@@ -1372,7 +1372,7 @@
     SUBDIR += sipsak
     SUBDIR += skstream
     SUBDIR += skyron-pkg-WireGuard
-    SUBDIR += skyron-561log
+    SUBDIR += skyron-pkg-5651log
     SUBDIR += sl2tps
     SUBDIR += smb4k
     SUBDIR += smcroute
