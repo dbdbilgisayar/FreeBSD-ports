@@ -1371,6 +1371,7 @@
     SUBDIR += siproxd
     SUBDIR += sipsak
     SUBDIR += skstream
+    SUBDIR += skyron-pkg-WireGuard
     SUBDIR += sl2tps
     SUBDIR += smb4k
     SUBDIR += smcroute
