@@ -2,7 +2,7 @@
 
 PORTNAME=	skyron-pkg-E2guardian5
 PORTVERSION=	2.5.1
-PORTREVISION=   2
+
 CATEGORIES=	www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
