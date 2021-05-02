@@ -28,7 +28,6 @@
 	<name>5651log</name>
 	<version>%%PKGVERSION%%</version>
 	<title>net/5651log</title>
-	<include_file>/usr/local/pkg/5651log/5651log_wg.inc</include_file>
 	<menu>
 		<name>5651log</name>
 		<section>Service</section>

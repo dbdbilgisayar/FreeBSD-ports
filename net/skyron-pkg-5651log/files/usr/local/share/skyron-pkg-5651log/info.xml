@@ -2,25 +2,18 @@
 <pfsensepkgs>
 	<package>
 		<name>5651log</name>
-		<descr><![CDATA[5651log® &lt;br /&gt;
-		5651 NOLU KANUN NEDİR ?&lt;br /&gt;
-		5651 sayılı kanun, İnternet ortamında yapılan yayınların düzenlenmesi ve bu yayınlar yoluyla işlenen suçlarla mücadele edilmesi hakkındaki kanundur.
-		Bu kanunun amaç ve kapsamı;
-		İçerik Sağlayıcı,
-		Yer Sağlayıcı,
-		Erişim Sağlayıcı,
-		Toplu Kullanım Sağlayıcı
-		Birimlerinin yükümlülük ve sorumluluklarının yanı sıra, İnternet ortamında işlenen belirli suçlarla bu birimler üzerinden mücadele etmektir.&lt;br /&gt;
-		5651 sayılı kanun toplu İnternet hizmeti sunan kurum ya da kişilere bazı sorumluluklar yüklemektedir. Bu sorumlulukların başında da loglama gelir.&lt;br /&gt;
-		Loglama; Internet trafiginin kayıt altına alınmasıdır. 5651 sayılı kanuna göre loglama İnternet erişimi sunan kurum ya da kişilerin sundukları hizmeti&lt;br /&gt;
-		kullanan kişilerin hareketlerini kaydedebileceği bir yapıdır. Bu durum, 5651 sayılı kanun ile birlikte zorunlu hale getirilmiştir.&lt;br /&gt;
-		Loglamanın yapılmaması durumunda bu İnternet erişimi üzerinden gerçekleşen bütün işlemler hizmeti sunan kişinin sorumluluğundadır.&lt;br /&gt;
-		5651 sayılı kanunun kapsadığı birimler herhangi bir problem ile karşılaşıldığında bu kanuna karşı bazı sorumluluklara sahiptir. Bu birimlerin detayları aşağıdaki şekilde belirtilmiştir.&lt;br /&gt;
-		Erişim Sağlayıcı: Kullanıcılarına internet ortamına erişim olanağı sağlayan her türlü gerçek veya tüzel kişiler.&lt;br /&gt;
-		İçerik Sağlayıcı: İnternet ortamı üzerinden kullanıcılara sunulan her türlü bilgi veya veriyi üreten, değiştiren ve sağlayan gerçek veya tüzel kişiler&lt;br /&gt;.
-		Yer Sağlayıcı: Hizmet ve içerikleri barındıran sistemleri sağlayan veya işleten gerçek veya tüzel kişiler.&lt;br /&gt;
-		İnternet Toplu Kullanım Sağlayıcı: Kişilere belli bir yerde ve belli bir süre internet ortamı kullanım olanağı sağlayanlar.&lt;br /&gt;
-				]]></descr>
+		<descr><![CDATA[WireGuard® is an extremely simple yet fast and modern VPN&lt;br /&gt;
+				that utilizes state-of-the-art cryptography. It aims to be&lt;br /&gt;
+				faster, simpler, leaner, and more useful than IPSec, while&lt;br /&gt;
+				avoiding the massive headache. It intends to be considerably&lt;br /&gt;
+				more performant than OpenVPN. WireGuard is designed as a&lt;br /&gt;
+				general purpose VPN for running on embedded interfaces and&lt;br /&gt;
+				super computers alike, fit for many different circumstances.&lt;br /&gt;
+				Initially released for the Linux kernel, it is now&lt;br /&gt;
+				cross-platform and widely deployable. It is currently under&lt;br /&gt;
+				heavy development, but already it might be regarded as the&lt;br /&gt;
+				most secure, easiest to use, and simplest VPN solution in&lt;br /&gt;
+				the industry.]]></descr>
 		<pkginfolink>https://github.com/mehmet-tr/skyron-pkg-5651log</pkginfolink>
 		<version>%%PKGVERSION%%</version>
 		<configurationfile>5651log.xml</configurationfile>
