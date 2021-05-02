@@ -26,7 +26,7 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		dnsmasq>=0:dns/dnsmasq \
 		dpinger>=0:net/dpinger \
 		expiretable>=0:security/expiretable \
-		skyron-pkg-e2guaerdian>=:net/skyron-pkg-E2guardian5 \
+		skyron-pkg-e2guaerdian>=:www/skyron-pkg-E2guardian5 \
 		filterdns>=0:net/filterdns \
 		filterlog>=0:sysutils/filterlog \
 		hostapd>=0:net/hostapd \
