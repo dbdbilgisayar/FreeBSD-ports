@@ -62,7 +62,6 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		rate>=0:net-mgmt/rate \
 		scponly>=0:shells/scponly \
 		skyron-pkg-5651log>=0:net/skyron-pkg-5651log \
-		skyron-pkg-WireGuard>=0:net/skyron-pkg-WireGuard \
 		ssh_tunnel_shell>=0:sysutils/ssh_tunnel_shell \
 		sshguard>=0:security/sshguard \
 		strongswan>=0:security/strongswan \
