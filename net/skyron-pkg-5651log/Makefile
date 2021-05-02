@@ -24,9 +24,7 @@ do-extract:
 
 do-install:
 	${MKDIR} ${STAGEDIR}/etc/inc/priv
-
 	${MKDIR} ${STAGEDIR}${PREFIX}/pkg/5651log
-
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/shortcuts
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/imzalar
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/bck
@@ -71,9 +69,6 @@ do-install:
 
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/pkg/5651log.xml \
 		${STAGEDIR}${PREFIX}/pkg
-
-	${INSTALL_DATA} ${FILESDIR}${PREFIX}/pkg/5651log/*.inc \
-		${STAGEDIR}${PREFIX}/pkg/5651log
 
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/www/shortcuts/pkg_5651log.inc \
 		${STAGEDIR}${PREFIX}/www/shortcuts
