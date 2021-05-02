@@ -1,6 +1,6 @@
 # $FreeBSD$
 
-PORTNAME=	skyron-pkg-E2guardian5
+PORTNAME=	skyron-pkg-e2guardian5
 PORTVERSION=	2.5.1
 
 CATEGORIES=	www
