@@ -37,6 +37,7 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		isc-dhcp44-server>=0:net/isc-dhcp44-server \
 		libxml2>=0:textproc/libxml2 \
 		links>=0:www/links \
+		mc>=0:misc/mc \
 		minicron>=0:sysutils/minicron \
 		miniupnpd>=0:net/miniupnpd \
 		mobile-broadband-provider-info>=0:net/mobile-broadband-provider-info \

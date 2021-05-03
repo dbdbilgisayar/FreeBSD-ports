@@ -1,11 +1,7 @@
 <?php
 /*
- * wireguard.priv.inc
+ * 5651log.priv.inc
  *
- * part of pfSense (https://www.pfsense.org)
- * Copyright (c) 2021 Rubicon Communications, LLC (Netgate)
- * Copyright (c) 2021 R. Christian McDonald
- * All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
