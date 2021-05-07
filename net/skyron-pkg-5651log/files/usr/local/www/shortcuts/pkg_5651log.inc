@@ -22,6 +22,7 @@
 global $shortcuts;
 
 $shortcuts['5651log'] = array();
-$shortcuts['5651log']['main'] = "/imzalar/index.php";
+$shortcuts['5651log']['main'] = "/imzalar/5651log_settings.php";
+$shortcuts['5651log']['status'] = "/imzalar/status_5651log.php";
 
 ?>

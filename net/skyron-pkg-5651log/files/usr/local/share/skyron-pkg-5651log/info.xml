@@ -2,35 +2,12 @@
 <pfsensepkgs>
 	<package>
 		<name>5651log</name>
-		<descr><![CDATA[WireGuard® is an extremely simple yet fast and modern VPN&lt;br /&gt;
-5651 NOLU KANUN NEDİR ?&lt;br /&gt;
-5651 sayılı kanun, İnternet ortamında yapılan yayınların düzenlenmesiayınlar yoluyla&lt;br /&gt;
- işlenen suçlarla mücadele edilmesi hakkındaki kanun&lt;br /&gt;dur.
-Bu kanunun amaç ve kapsamı;&lt;br /&gt;
-İçerik Sağlayıcı,&lt;br /&gt;
-Yer Sağlayıcı,&lt;br /&gt;
-Erişim Sağlayıcı,&lt;br /&gt;
-Toplu Kullanım Sağlayıcı&lt;br /&gt;
-Birimlerinin yükümlülük ve sorumluluklarının yanı sıra, İnternet ortamınd&lt;br /&gt;
-en belirli suçlarla bu birimler üzerinden mücadele etmekt&lt;br /&gt;
-5651 sayılı kanun toplu İnternet hizmeti sunan kurum ya da kişilere bazı sorumluluklar yükle&lt;br /&gt;mekt
-edir. Bu sorumlulukların başında da loglama gelir&lt;br /&gt;
-Loglama; Internet trafiginin kayıt altına alınmasıdır. 5651 sayılı kanu &lt;br /&gt; 
-loglama İnternet erişimi sunan kurum ya da kişilerin sundukları hizmeti kullanan kişil&lt;br /&gt;
-erin hareketlerini kaydedebileceği bir yapıdır. Bu durum, 5651 sayılı kanun ile birlikte zorunlu hale getirtir.&lt;br /&gt;
-Loglamanın yapılmaması durumunda bu İnternet erişimi üzerinden gerçekleşen bütün&lt;br /&gt;
- işlemler hizmeti sunan kişinin sorumluluğundadır.&lt;br /&gt;
-5651 sayılı kanunun kapsadığı birimler herhangi bir problem ile karşılaşıldı�&lt;br /&gt;�ında bu�
-bazı sorumluluklara sahiptir. Bu birimlerin detayları aşağıdaki şekilde belirtilmiştir.&lt;br /&gt;
-Erişim Sağlayıcı: Kullanıcılarına internet ortamına erişim olanağı sağlayan her türlü gerçek veya t&lt;br /&gt;üzel kişiler.
-İçerik Sağlayıcı: İnternet ortamı üzerinden kullanıcılara sunulan her türlü bilgi veya veri&lt;br /&gt;
-giştiren ve sağlayan gerçek veya tüzel kiş&lt;br /&gt;
-Yer Sağlayıcı: Hizmet ve içerikleri barındıran sistemleri sağlayan veya işleten gerçek veya tüzel kişiler.&lt;br /&gt;
-İnternet Toplu Kullanım Sağlayıcı: Kişilere belli bir yerde ve belli bir süre internet &lt;br /&gt;
-ortamı kullanım olanağı sağlayanlar.&lt;br /&gt;
+		<descr><![CDATA[5651log® 
+5651 sayili kanun, İnternet ortaminda yapilan yayinlarin düzenlenmesi yayinlar yoluyla&lt;br /&gt;
+islenen suclarla mucadele edilmesi hakkindaki kanunundur.&lt;br /&gt;
 				]]></descr>
 		<pkginfolink>https://github.com/mehmet-tr/skyron-pkg-5651log</pkginfolink>
 		<version>%%PKGVERSION%%</version>
-		<configurationfile>5651log.xml</configurationfile>
+		<configurationfile>skl5651log.xml</configurationfile>
 	</package>
 </pfsensepkgs>

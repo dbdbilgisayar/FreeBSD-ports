@@ -16,15 +16,15 @@ require_once("filter.inc");
 require_once("shaper.inc");
 require_once("captiveportal.inc");
 
-$pgtitle = array(gettext("Services"), gettext("5651 log"), gettext("İmzalı Kayıt"));
-$pglinks = array("", "5651log.php", "5651log.php?lview=" . $lview, "@self");
+$pgtitle = array(gettext("Services"), gettext("5651 log"), gettext("Sing Record"));
+$pglinks = array("", "index.php", "index.php" . $lview, "@self");
 
 include("head.inc");
 
+
 $tab_array = array();
-$tab_array[] = array(gettext("Log Goruntule"), false, "index.php?lview={$lview}");
-$tab_array[] = array(gettext("Ayarlar"), false, "index.php?lview={$lsetup}");
-$tab_array[] = array(gettext("Cloud Backup"), false, "index.php?lview={$lbackup}");
+$tab_array[] = array(gettext("Log View"), false, "index.php");
+$tab_array[] = array(gettext("Settings"), false, "/pkg_edit.php?xml=skl5651log.xml");
 display_top_tabs($tab_array, true);
 
 
@@ -91,15 +91,15 @@ $languageStrings = Array(
 	"en" => Array(
 		
 		"Index of" => "", // displayed in the page title
-		"name" => "Adı", // column name in the file listing
-		"type" => "Tür", // column name in the file listing
-		"size" => "Boyut", // column name in the file listing
-		"date" => "Tarih", // column name in the file listing
-		"description" => "Açıklama", // column name in the file listing
+		"name" => "Name", // column name in the file listing
+		"type" => "Type", // column name in the file listing
+		"size" => "Size", // column name in the file listing
+		"date" => "Date", // column name in the file listing
+		"description" => "Description", // column name in the file listing
 		"DATEFORMAT" => $snifDateFormat, // special string, sets the format of the date (see http://www.php.net/manual/en/function.date.php)
-		"folder" => "Dizin", // a folder in the file listing
-		"archive" => "Arsiv", // an archive file in the file listing
-		"image" => "", // an image file in the file listing
+		"folder" => "Diroctory", // a folder in the file listing
+		"archive" => "Archive", // an archive file in the file listing
+		"image" => "Image", // an image file in the file listing
 		"text" => "", // a text file in the file listing
 		"HTML" => "", // an archive file in the file listing
 		"unknown" => "", // an unknown file in the file listing
@@ -171,9 +171,6 @@ foreach($_GET AS $key => $value) {
 	$_GET[$key] = strip_tags($value);
 	if ($_GET[$key] != $value) {
 		$displayError[] = translate("Illegal characters detected in URL, ignoring.");
-	}
-	if (!get_magic_quotes_gpc()) {
-		$_GET[$key] = stripslashes($value);
 	}
 }
 

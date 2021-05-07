@@ -1,7 +1,10 @@
 <?php
 /*
- * 5651log.priv.inc
+ * wireguard.priv.inc
  *
+ * part of Skyron (https://www.skyronfirewall.com)
+ * Copyright (c) 2005-2021 Heraklet Bilisim Teknolojileri Ltd. Sti.
+ * All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +27,12 @@ $priv_list['page-5651log']['descr'] = "Allow access to the 'Servis: 5651log' pag
 $priv_list['page-5651log']['match'] = array();
 
 $priv_list['page-5651log']['match'][] = "imzalar/index.php";
-$priv_list['page-5651log']['match'][] = "imzalar/5651log_backup.php";
-$priv_list['page-5651log']['match'][] = "imzalar/5651log_settings.php";
 
 $priv_list['page-status-5651log'] = array();
 $priv_list['page-status-5651log']['name'] = "WebCfg - Status: 5651log Status";
 $priv_list['page-status-5651log']['descr'] = "Allow access to the 'Status: 5651log Status' page.";
 $priv_list['page-status-5651log']['match'] = array();
 
-$priv_list['page-status-5651log']['match'][] = "imzalar/status_5651log.php";
+$priv_list['page-status-5651log']['match'][] = "imzalar/skl5651log.php";
 
 ?>

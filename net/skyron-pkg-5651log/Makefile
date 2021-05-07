@@ -24,7 +24,7 @@ do-extract:
 
 do-install:
 	${MKDIR} ${STAGEDIR}/etc/inc/priv
-	${MKDIR} ${STAGEDIR}${PREFIX}/pkg/5651log
+	${MKDIR} ${STAGEDIR}${PREFIX}/pkg
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/shortcuts
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/imzalar
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/bck
@@ -40,7 +40,9 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/tools
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/trlog
 	${MKDIR} ${STAGEDIR}${DATADIR}
-	
+
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/pkg/* \
+	${STAGEDIR}${PREFIX}/pkg
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/conf/openssl.cnf  \
 	${STAGEDIR}${PREFIX}/5651log/conf
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/dbprs/*.*  \
@@ -81,6 +83,6 @@ do-install:
 
 	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
 		${STAGEDIR}${DATADIR}/info.xml \
-		${STAGEDIR}${PREFIX}/pkg/5651log.xml
+		${STAGEDIR}${PREFIX}/pkg/skl5651log.xml
 
 .include <bsd.port.mk>
