@@ -44,6 +44,8 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		nginx>=0:www/nginx \
 		ntp>=0:net/ntp \
 		openvpn>=0:security/openvpn \
+		openssl-5651log>=0:security/openssl-5651log \
+		pfSense-pkg-Cron>=0:sysutils/pfSense-pkg-Cron \
 		${PHP_PKGNAMEPREFIX}openssl_x509_crl>=0:security/php-openssl_x509_crl@${PHP_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}pear-Auth_RADIUS>=0:net/pear-Auth_RADIUS@${PHP_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}pear-Crypt_CHAP>=0:security/pear-Crypt_CHAP@${PHP_FLAVOR} \

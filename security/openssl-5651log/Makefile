@@ -1,10 +1,10 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	openssl
+PORTNAME=	openssl-5651log
 PORTVERSION=	1.0.2.20170706
 CATEGORIES=	security devel
-PKGNAMESUFFIX=	-unsafe
+PKGNAMESUFFIX=	-5651log
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Unsafe SSL and crypto library
@@ -16,7 +16,7 @@ CPE_VERSION=	1.0.2k
 
 USES=		cpe perl5
 USE_PERL5=	build
-MAKE_ENV+=	LIBRPATH="${PREFIX}/openssl-unsafe/lib" GREP_OPTIONS= SHLIBVER=${OPENSSL_SHLIBVER}
+MAKE_ENV+=	LIBRPATH="${PREFIX}/openssl-5651log/lib" GREP_OPTIONS= SHLIBVER=${OPENSSL_SHLIBVER}
 CFLAGS+=	-fPIC -DPIC
 SUB_FILES=	pkg-message
 PLIST_SUB+=	SHLIBVER=${OPENSSL_SHLIBVER}
@@ -41,7 +41,7 @@ CONFIGURE_ARGS=	enable-camellia enable-cms enable-ec enable-ec2m \
 CONFIGURE_ARGS+=	enable-ec_nistp_64_gcc_128
 .endif
 
-OPENSSLDIR?=	${PREFIX}/openssl-unsafe/etc
+OPENSSLDIR?=	${PREFIX}/openssl-5651log/etc
 PLIST_SUB+=	OPENSSLDIR=${OPENSSLDIR:S=^${PREFIX}/==}
 
 .include "version.mk"
@@ -56,9 +56,9 @@ do-configure:
 		${WRKSRC}/config
 	cd ${WRKSRC} \
 	&& ${SETENV} CC="${CC}" FREEBSDCC="${CC}" CFLAGS="${CFLAGS}" PERL="${PERL}" \
-	./config --prefix=${PREFIX}/openssl-unsafe --openssldir=${OPENSSLDIR} \
+	./config --prefix=${PREFIX}/openssl-5651log --openssldir=${OPENSSLDIR} \
 		--install_prefix=${STAGEDIR} \
-		-L${PREFIX}/openssl-unsafe/lib ${CONFIGURE_ARGS}
+		-L${PREFIX}/openssl-5651log/lib ${CONFIGURE_ARGS}
 
 post-configure:
 	${REINPLACE_CMD} \
