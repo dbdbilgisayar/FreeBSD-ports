@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE packagegui SYSTEM "../schema/packages.dtd">
+<?xml-stylesheet type="text/xsl" href="../xsl/package.xsl"?>
+<packagegui>
+	<copyright>
+<![CDATA[
+/*
+ * lightsquid.xml
+ *
+ * part of skyron (https://www.skyronfirewall.com)
+ * Copyright (c) 2005-2021 Heraklet Bilisim Teknolojileri Ltd. Sti.
+ * All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+	]]>
+
+      </copyright>
+        <name>skl5651log_ssh_server</name>
+        <title>5651log: Settings</title>
+        <category>Status</category>
+        <include_file>/usr/local/pkg/skl5651log.inc</include_file>
+        <menu>
+                <name>5651log Report</name>
+                <section>Status</section>
+                <url>/pkg_edit.php?xml=skl5651log.xml</url>
+        </menu>
+        <service>
+                <name>skl5651log</name>
+                <rcfile>skl5651log.sh</rcfile>
+                <executable>skl5651log_ls</executable>
+                <description>5651log Ssh File Trranfer Server</description>
+        </service>
+
+        <tabs>
+                <tab>
+                        <text>Log View</text>
+                        <url>/imzalar</url>
+                </tab>
+                <tab>
+                        <text>General</text>
+                        <url>/pkg_edit.php?xml=skl5651log_config.xml</url>
+                </tab>
+                <tab>
+                        <text>Ca Setting</text>
+                        <url>/imzalar/skl5651log_camanager.php</url>
+                </tab>
+
+                     <tab>
+                        <text>Cloud Setting</text>
+                        <url>/pkg_edit.php?xml=skl5651log_cloud.xml&amp;id=0</url>
+                </tab>
+
+                     <tab>
+                        <text>Cron Setting</text>
+                        <url>/imzalar/skl5651log_cron.php</url>
+                </tab>
+
+
+                <tab>
+                        <text>Help</text>
+                        <url>/imzalar/skl5651log_about.php</url>
+                </tab>
+        </tabs>
+	<fields>
+		<field>
+			<name>Instructions</name>
+			<type>listtopic</type>
+		</field>
+		<field>
+			<type>info</type>
+			<fielddescr>
+				<![CDATA[
+				Perform these steps after install
+				]]>
+			</fielddescr>
+			<description>
+				<![CDATA[
+				<strong><span class="text-danger">IMPORTANT: </span>Click Info and follow the instructions below if this is initial install!</strong>
+				<div class="infoblock"><ol type="1">
+				</ol></div>
+				]]>
+			</description>
+		</field>
+		<field>
+			<name>File Tranfer Service Settings</name>
+			<type>listtopic</type>
+		</field>
+               <field>
+                        <fielddescr>SFTP File Tranfer Server</fielddescr>
+                        <fieldname>sftp_server</fieldname>
+                        <description>
+                                <![CDATA[
+                                Port the Sftp server for ssh will listen on.
+                                <span class="text-info">(Default: localhost)</span>
+                                ]]>
+                        </description>
+                        <type>input</type>
+                        <size>5</size>
+                        <default_value>localhost</default_value>
+                        <required/>
+                </field>
+
+		<field>
+			<fielddescr>SFTP File Tranfer Port</fielddescr>
+			<fieldname>sftp_port</fieldname>
+			<description>
+				<![CDATA[
+				Port the sftp server for ssh server will listen on.
+				<span class="text-info">(Default: 22)</span>
+				]]>
+			</description>
+			<type>input</type>
+			<size>5</size>
+			<default_value>22</default_value>
+			<required/>
+		</field>
+
+		<field>
+			<fielddescr>Ssh File Transfer  User</fielddescr>
+			<fieldname>sftp_user</fieldname>
+			<description>
+				<![CDATA[
+				Username used to access Sftp Server.
+				<span class="text-info">(Default: admin)</span>
+				]]>
+			</description>
+			<type>input</type>
+			<size>5</size>
+			<default_value>admin</default_value>
+			<required/>
+		</field>
+		<field>
+			<fielddescr>Ssh File Tranfer Password</fielddescr>
+			<fieldname>sftp_password</fieldname>
+			<description>
+				<![CDATA[
+				Password used to access Sftp server.
+				<span class="text-info">(Default: skyron)</span>
+				]]>
+			</description>
+			<type>password</type>
+			<size>5</size>
+			<default_value>skyron</default_value>
+			<required/>
+		</field>
+
+
+	</fields>
+</packagegui>

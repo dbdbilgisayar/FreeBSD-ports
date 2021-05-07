@@ -41,7 +41,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/trlog
 	${MKDIR} ${STAGEDIR}${DATADIR}
 
-	${INSTALL_DATA} ${FILESDIR}${PREFIX}/pkg/* \
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/pkg/*.* \
 	${STAGEDIR}${PREFIX}/pkg
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/conf/openssl.cnf  \
 	${STAGEDIR}${PREFIX}/5651log/conf
