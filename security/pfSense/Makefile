@@ -1,14 +1,14 @@
 # $FreeBSD$
 
-PORTNAME=	pfSense
+PORTNAME=	Skyron
 DISTVERSION=	2.5.1
 CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
-MAINTAINER=	renato@pfsense.com
-COMMENT?=	Meta package to install pfSense required ports
+MAINTAINER=	coreteam@skyronfirewall.com
+COMMENT?=	Meta package to install Skyron required ports
 
 LICENSE=	APACHE20
 
@@ -44,7 +44,6 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		nginx>=0:www/nginx \
 		ntp>=0:net/ntp \
 		openvpn>=0:security/openvpn \
-		openssl-5651log>=0:security/openssl-5651log \
 		pfSense-pkg-Cron>=0:sysutils/pfSense-pkg-Cron \
 		${PHP_PKGNAMEPREFIX}openssl_x509_crl>=0:security/php-openssl_x509_crl@${PHP_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}pear-Auth_RADIUS>=0:net/pear-Auth_RADIUS@${PHP_FLAVOR} \
