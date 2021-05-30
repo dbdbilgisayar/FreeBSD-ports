@@ -41,7 +41,7 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		miniupnpd>=0:net/miniupnpd \
 		mobile-broadband-provider-info>=0:net/mobile-broadband-provider-info \
 		mpd5>=0:net/mpd5 \
-		mysql57-server>=0:database/mysql57-server \
+		mysql57-server>=0:databases/mysql57-server \
 		nginx>=0:www/nginx \
 		ntp>=0:net/ntp \
 		openvpn>=0:security/openvpn \
