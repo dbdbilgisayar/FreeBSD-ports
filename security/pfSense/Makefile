@@ -63,7 +63,7 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		skyron-pkg-e2guardian5>=:www/skyron-pkg-e2guardian5 \
 		php74-soap>=0:net/php74-soap \
 		pftop>=0:sysutils/pftop \
-		php74-mysqli=>0:databases/php74-mysqli \
+		php74-mysqli>=0:databases/php74-mysqli \
 		qstats>=0:sysutils/qstats \
 		radvd>=0:net/radvd \
 		rate>=0:net-mgmt/rate \
