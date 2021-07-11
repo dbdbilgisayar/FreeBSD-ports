@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE packagegui SYSTEM "../schema/packages.dtd">
+<?xml-stylesheet type="text/xsl" href="../xsl/package.xsl"?>
+<packagegui>
+	<copyright>
+<![CDATA[
+/*
+ * limitations under the License.
+ */
+	]]>
+	</copyright>
+	<name>skl5651log</name>
+	<title>5651log: Settings</title>
+	<category>Status</category>
+	<include_file>/usr/local/pkg/skl5651log.inc</include_file>
+	<menu>
+		<name>5651log Report</name>
+		<section>Status</section>
+		<url>/pkg_edit.php?xml=lightsquid.xml</url>
+	</menu>
+	<service>
+		<name>5651log_servis</name>
+		<rcfile>sk5651log.sh</rcfile>
+		<executable>sk5651log_ls</executable>
+		<description>5651log Server</description>
+	</service>
+	<tabs>
+		<tab>
+			<text>Log View</text>
+			<url>/imzalar</url>
+			
+		</tab>
+		<tab>
+			<text>General</text>
+			<url>/pkg_edit.php?xml=skl5651log.xml</url>
+		</tab>
+		<tab>
+                        <text>Ca Setting</text>
+                        <url>/imzalar/skl5651log_camanager.php</url>
+                </tab>
+
+		     <tab>
+                        <text>Cloud Setting</text>
+                        <url>/pkg_edit.php?xml=skl5651log_cloud.xml&amp;id=0</url>
+                </tab>
+
+		     <tab>
+                        <text>Cron Setting</text>
+                        <url>/imzalar/skl5651log_cron.php</url>
+                </tab>
+
+
+		<tab>
+			<text>Help</text>
+			<url>/imzalar/skl5651log_about.php</url>
+		</tab>
+	</tabs>
+	<fields>
+		<field>
+			<name>Instructions</name>
+			<type>listtopic</type>
+		</field>
+		<field>
+			<type>info</type>
+			<fielddescr>
+				<![CDATA[
+				Perform these steps after install
+				]]>
+			</fielddescr>
+			<description>
+				<![CDATA[
+				<strong><span class="text-danger">IMPORTANT: </span>Click Info and follow the instructions below if this is initial install!</strong>
+				<div class="infoblock"><ol type="1">
+				<li>
+					<strong><span class="text-info">Enable and configure 5651log logging</span></strong><br/>
+					Check 'Enable Access Logging' and configure 'Log Store Directory' on <a href="/pkg_edit.php?xml=skl5651log.xml">5651log Server > General</a> page.<br/>
+					Hint: It is strongly suggested to leave the 'Log Store Directory' at default <code>/var/logs</code> value.<br/><br/>
+				</li>
+				<li>
+
+				</li>
+				</ol></div>
+				]]>
+			</description>
+		</field>
+		<field>
+			<name>5651log Service Settings</name>
+			<type>listtopic</type>
+		</field>
+
+		<field>
+			<fielddescr>5651log Service</fielddescr>
+			<fieldname>service_state</fieldname>
+			<description>5651log Service state active opassive set</description>
+			<sethelp>This option configures the .</sethelp>
+			<type>checkbox</type>
+			<default_value>on</default_value>
+		</field>
+
+		<field>
+			<fielddescr>Select 5651log Interface(s)</fielddescr>
+			<fieldname>listen_Interface</fieldname>
+			<description>
+				<![CDATA[
+				The interface(s) the 5651log server will transparently intercept requests on.
+				]]>
+			</description>
+			<type>interfaces_selection</type>
+			<default_value>lan</default_value>
+			<hideinterfaceregex>loopback</hideinterfaceregex>
+			<multiple/>
+		</field>
+
+
+
+		<field>
+			<fielddescr>Listem Program</fielddescr>
+			<fieldname>listen_program</fieldname>
+			<description>
+				<![CDATA[
+				Select the interface program to log <br/>
+				<span class="text-info">
+				<strong>Legend:</strong>
+				</span>
+				]]>
+			</description>
+			<type>select</type>
+			<default_value>lhp_none</default_value>
+			<options>
+				<option><name>none</name><value>lhp_none</value></option>
+				<option><name>squid</name><value>squid</value></option>
+				<option><name>e2guardian</name><value>e2guardian</value></option>
+			</options>
+		</field>
+
+
+		<field>
+			<name>5651log Type Settings</name>
+			<type>listtopic</type>
+		</field>
+                <field>
+                        <fielddescr>5651log web,proxy </fielddescr>
+                        <fieldname>log_web</fieldname>
+                        <description>5651log set Web logging</description>
+                        <sethelp>This option configures the .</sethelp>
+                        <type>checkbox</type>
+                        <default_value>on</default_value>
+                </field>
+                <field>
+                        <fielddescr>5651log dhcp</fielddescr>
+                        <fieldname>log_dhcp</fieldname>
+                        <description>5651log set Dhcp loging</description>
+                        <sethelp>This option configures the .</sethelp>
+                        <type>checkbox</type>
+                        <default_value>on</default_value>
+                </field>
+                <field>
+                        <fielddescr>5651log Portal</fielddescr>
+                        <fieldname>log_portal</fieldname>
+                        <description>5651log set portal loging</description>
+                        <sethelp>This option configures the .</sethelp>
+                        <type>checkbox</type>
+                        <default_value>on</default_value>
+                </field>
+                <field>
+                        <fielddescr>5651log System</fielddescr>
+                        <fieldname>log_system</fieldname>
+                        <description>5651log captures system logs</description>
+                        <sethelp>This option configures the .</sethelp>
+                        <type>checkbox</type>
+                        <default_value>on</default_value>
+                </field>
+
+                <field>
+                        <fielddescr>5651log Syslog</fielddescr>
+                        <fieldname>log_syslog</fieldname>
+                        <description>5651log captures sylog logs</description>
+                        <sethelp>This option configures the .</sethelp>
+                        <type>checkbox</type>
+                        <default_value>on</default_value>
+                </field>
+                <field>
+                        <fielddescr>5651log traffic</fielddescr>
+                        <fieldname>log_traffic</fieldname>
+                        <description>5651log captures traffic logs</description>
+                        <sethelp>This option configures the .</sethelp>
+                        <type>checkbox</type>
+                        <default_value>on</default_value>
+                </field>
+                <field>
+                        <fielddescr>5651log Custom</fielddescr>
+                        <fieldname>log_custom</fieldname>
+                        <description>5651log captures Custom logs</description>
+                        <sethelp>This option configures the .</sethelp>
+                        <type>checkbox</type>
+                        <default_value>on</default_value>
+                </field>
+	</fields>
+	<custom_php_install_command>
+		lightsquid_install();
+	</custom_php_install_command>
+	<custom_php_deinstall_command>
+		lightsquid_deinstall();
+	</custom_php_deinstall_command>
+	<custom_php_resync_config_command>
+	<![CDATA[
+		// Do not resync configuration on manual reports refresh
+		if ($_POST['refreshnow'] == "Refresh Now" || $_POST['refreshfull'] == "Refresh Full") {
+			return;
+		}
+		lightsquid_resync();
+	]]>
+	</custom_php_resync_config_command>
+	<custom_php_validation_command>
+		lightsquid_validate_input($_POST, $input_errors);
+	</custom_php_validation_command>
+</packagegui>

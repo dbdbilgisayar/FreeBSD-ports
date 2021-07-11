@@ -1,0 +1,71 @@
+5651 Loglama Kurulumu
+
+5651log Version 2.5.1
+1. Kodlarda iyileştirme yapıldı. Optimizasyon yapıldı.
+2. Web panel eklendi. yeni :)
+3. Web panel için service menüsü altına 5651log linki eklendi.
+4. Kurulum sonrası otomatik test imzalama eklendi.
+5. Event log yeniden düzenlendi. 
+
+Daha az kod yazarak kod karmaşasından kurtulmak için yeni versiyonu hazırladım.
+Az kod az sorun optimize olmus bir sistem.
+aynı kodları tekrar tekrar yazmanın bir anlamanın olmadıgını düşünüyorum.
+sadece degişen bölümleri paremetrik hale getirerek daha işlevsel bir kod oldu sanırım.
+
+skyron platformuna kurulum yaptıgınızda 
+
+1. skyron menu service altına Log web yönetim paneli için 5651 log eklenir.
+2. cron kurulur.
+3. cron için zamanlanmış görev otomatik tanımlanır.
+4. CA oluşturulur.
+5. imzalama için sertifika oluşturulur.
+6. Bazı ayarlar sizin adınıza otomatik yapılır. 
+ 
+5651 logama yaziliminin kurulacagi dizin gidilip repodan 5651log kurulum dosyalari indirilir
+
+pfsense icin asagidaki adimlar yapilir.
+
+pkg install git
+cd /usr/local
+git clone -b imzala_2_4 http://github.com/mehmet-tr/5651log.git 5651log
+cd /usr/local/5651log
+
+indirme islemi tamamlandiktan sonra konfigurasyona gecilir.
+
+Yüklme ve başlangıç ayarları için install.sh dosyasini çalıştırılır.
+Bu işemi yapmadan imzalama yapamazsınız.
+
+Local imzalama için kurulum.
+cd /usr/local/5651log/install && ./install.sh
+
+Mysql veritabanına logların pars edilip gönderilmesi.
+cd /usr/local/5651log/mysql/install && ./install.sh
+1. radius databse oluşturulur.
+2. radius databasine tablolar prosedurler ve viewler oluşturulur.
+3. squid veya e2guardian logları için servisler oluşturulur.
+ 
+Mysql veritabanına logların pars edilip gönderilmesi.
+cd /usr/local/5651log/logtodb/install && ./install.sh
+1.logtodb uygulama ve servisleri kurulur.
+
+
+Imza test islemi icin;
+ 
+cd /usr/local/5651log/imzala && ./imzala.sh
+Dogru yapıp yapmadıgını anlamak için logs dizinin de bulunan event dosyasına bakın.
+Eger dogru imzalama yapmışsa /usr/local/www/imzalar dizininde imzalanmış dosyaları bulabilirsiniz.
+
+Not: Zaman damgasinin vurulabilmesi icin openssl yazilimin ts desteginin olmasi gerekiyor. 
+pfSense yaziliminda eski versiyonlarda openssl tsa destegi kontrol edilmeli aksi durumda çalışmayacaktır.
+pfSense üzerinde bulunan openssl yazılımını güncellemeniz gerekir.
+
+
+
+
+test()
+{
+
+}
+
+
+

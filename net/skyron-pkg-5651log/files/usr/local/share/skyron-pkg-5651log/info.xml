@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<pfsensepkgs>
+	<package>
+		<name>5651log</name>
+		<descr><![CDATA[5651log® 
+5651 sayili kanun, İnternet ortaminda yapilan yayinlarin düzenlenmesi yayinlar yoluyla&lt;br /&gt;
+islenen suclarla mucadele edilmesi hakkindaki kanunundur.&lt;br /&gt;
+				]]></descr>
+		<pkginfolink>https://github.com/mehmet-tr/skyron-pkg-5651log</pkginfolink>
+		<version>%%PKGVERSION%%</version>
+		<configurationfile>skl5651log.xml</configurationfile>
+	</package>
+</pfsensepkgs>
