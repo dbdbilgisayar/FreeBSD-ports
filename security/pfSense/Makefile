@@ -26,7 +26,7 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		dnsmasq>=0:dns/dnsmasq \
 		dpinger>=0:net/dpinger \
 		expiretable>=0:security/expiretable \
-		skyron-pkg-e2guardian5>=:www/skyron-pkg-e2guardian5 \
+		pfSense-pkg-freeradius3>=0:net/pfSense-pkg-freeradius3 \
 		filterdns>=0:net/filterdns \
 		filterlog>=0:sysutils/filterlog \
 		hostapd>=0:net/hostapd \
@@ -60,11 +60,13 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		pfSense-repo>=0:sysutils/pfSense-repo \
 		pfSense-upgrade>=0:sysutils/pfSense-upgrade \
 		pftop>=0:sysutils/pftop \
+		php74-mysqli=>0:databases/php74-mysqli \
 		qstats>=0:sysutils/qstats \
 		radvd>=0:net/radvd \
 		rate>=0:net-mgmt/rate \
 		scponly>=0:shells/scponly \
 		skyron-pkg-5651log>=0:net/skyron-pkg-5651log \
+		skyron-pkg-e2guardian5>=:www/skyron-pkg-e2guardian5 \
 		php74-soap>=0:net/php74-soap \
 		ssh_tunnel_shell>=0:sysutils/ssh_tunnel_shell \
 		sshguard>=0:security/sshguard \
