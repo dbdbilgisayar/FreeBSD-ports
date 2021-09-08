@@ -1,0 +1,13 @@
+prefix=/usr/local/skyron-openssl
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+enginesdir=${libdir}/engines
+
+Name: OpenSSL-libcrypto
+Description: OpenSSL cryptography library
+Version: 1.0.2-chacha
+Requires: 
+Libs: -L${libdir} -lcrypto
+Libs.private: -L/usr/local/skyron-openssl/lib
+Cflags: -I${includedir} 
