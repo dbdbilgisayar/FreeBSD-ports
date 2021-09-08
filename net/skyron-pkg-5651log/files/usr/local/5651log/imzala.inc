@@ -42,12 +42,12 @@ TSAPublicKEY=${imzala_path}/CA/tsacert.pem
 openssl=/usr/local/5651log/bin/openssl
 openssl_conf=/usr/local/5651log/conf/openssl.cnf
 
-#echo "pfsense" >../CA/password.txt
+#echo "skyron" >../CA/password.txt
 #password=$(<../CA/password.txt)
 #echo "$password"
-password="pfsense"
+password="skyron"
 
-eposta_adresi=info@dbdbilgisayar.com
+eposta_adresi=info@skyronfirewall.com
 
 #ftp sunucu
 
@@ -55,6 +55,6 @@ ftpserver={L_FTP_SERVER}
 ftpusername={L_FTP_USER}
 ftppassword={L_FTP_PASS}
 
-sshserver=213.74.142.100
+sshserver=127.0.0.1
 sshport=2221
 sshpass=VGFsYXNCbGQyMDIwCg==

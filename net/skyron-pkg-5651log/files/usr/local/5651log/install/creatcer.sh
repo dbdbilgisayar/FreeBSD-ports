@@ -1,26 +1,26 @@
 #!/bin/env sh
-/*
- * Copyright (c) 2021 M.Demir Heraklet
- * Modified by Mehmet Demir
- * Heraklet Security
- * www.heraklet.com
- * info@heraklet.com
-*/
+#/*
+# * Copyright (c) 2021 M.Demir Heraklet
+# * Modified by Mehmet Demir
+# * Heraklet Security
+# * www.heraklet.com
+# * info@heraklet.com
+#*/
 
-echo "________ __________________    _________              "
-echo "\______ \\______   \______ \  /   _____/ ____   ____  "
-echo " |    |  \|    |  _/|    |  \ \_____  \_/ __ \_/ ___\ "
-echo " |        \    |   \|        \/        \  ___/\  \___ "
-echo "/_______  /______  /_______  /_______  /\___  >\___  >"
-echo "        \/       \/        \/        \/     \/     \/ "
+echo "  @@@@@@ @@@  @@@ @@@ @@@ @@@@@@@   @@@@@@  @@@  @@@"
+echo " !@@     @@!  !@@ @@! !@@ @@!  @@@ @@!  @@@ @@!@!@@@"
+echo "  !@@!!  @!@@!@!   !@!@!  @!@!!@!  @!@  !@! @!@@!!@!"
+echo "     !:! !!: :!!    !!:   !!: :!!  !!:  !!! !!:  !!!"
+echo " ::.: :   :   :::   .:     :   : :  : :. :  ::    : "
+                                                    
 sleep 2
 
-#SSL_CN="dbdsecurity.com"
-#SSL_EMAIL="info@dbdsecurity.com"
-#SSL_O="DBDSEC"
+#SSL_CN="skyronfirewall.com"
+#SSL_EMAIL="info@skyronfirewall.com"
+#SSL_O="Skyron"
 #SSL_C="tr"
 #SSL_ST="turkiye"
-#SSL_L="kayseri"
+#SSL_L="Istanbul"
 
 SSL_CN={L_SSL_CN}
 SSL_EMAIL={L_SSL_EMAIL}

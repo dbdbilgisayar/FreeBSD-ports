@@ -33,12 +33,12 @@ fi
 echo "<=== openssl sembolik linki olusturuluyor."
 mkdir -p /usr/local/5651log/bin/
 rm /usr/local/5651log/bin/openssl
-ln -s /usr/bin/openssl /usr/local/5651log/bin/openssl
+ln -s /usr/local/openssl-5651log/bin/openssl /usr/local/5651log/bin/openssl
 
 echo "<=== Web yonetim paneli hazirlaniyor..."
 mkdir -p /usr/local/www/imzalar
 cp index.php /usr/local/www/imzalar
-echo "<=== Servisler hazırlanıyor..."
+echo "<=== Servisler hazirlaniyor..."
 cp accessdb.sh /usr/local/etc/rc.d
 }
 
@@ -51,12 +51,12 @@ D_TRAFIK=yes
 D_CUSTOM=no
 D_LOCATION=Sube1
 
-D_SSL_CN="www.dbdsecurity.com"
-D_SSL_EMAIL="info@dbdsecurity.com"
-D_SSL_O="DBDSec"
+D_SSL_CN="www.skyronfirewall.com"
+D_SSL_EMAIL="info@skyronfirewall.com"
+D_SSL_O="Skyron"
 D_SSL_C="Tr"
 D_SSL_ST="Turkiye"
-D_SSL_L="Kayseri"
+D_SSL_L="Istanbul"
 
 D_SSH_SERVER="127.0.0.1"
 D_SSH_PORT="22"
@@ -90,14 +90,14 @@ _UserInputs() {
     QH_SYSLOG="${QH_LOCATION:-$D_LOCATION}"
 	echo "ssh server parametreleri" 
 
-    read -p "SSH_SERVER[$D_SSH_SERVER]: " QH_SSH_SERVER
+    read -p "SSH_SERVER [$D_SSH_SERVER]: " QH_SSH_SERVER
     QH_SYSLOG="${QH_SSH_SERVER:-$D_SSH_SERVER}"
 
-    read -p "SSH_PORT [$D_SSH_PORT: " QH_SSH_PORT
+    read -p "SSH_PORT [$D_SSH_PORT]: " QH_SSH_PORT
     QH_SYSLOG="${QH_SSH_PORT:-$D_SSH_PORT}"
 
     read -p "SSH_PASS [$D_PASS]: " QH_SSH_PASS
-    QH_SYSLOG="${QH_SSH_PASS:-$D_SSH_PASS}"
+    QH_SSH_PASS="${QH_SSH_PASS:-$D_SSH_PASS}"
 
  	
     echo
@@ -147,29 +147,29 @@ _UserInputs() {
 
 }
 
-Pfsensemi(){
+skyronmu(){
 if [ ${USER} != "root" ]; then
         echo "Please login \"root\" user. Not \"admin\" user !"
         exit
 fi
 
 if [ -f /etc/platform ]; then
-	if [ `cat /etc/platform` = "pfSense" ]; then
-		OS_NAME=pfSense
+	if [ `cat /etc/platform` = "skyron" ]; then
+		OS_NAME=skyron
 		OS_VERSION=`cat /etc/version`
 		OS_VERSION_MAJOR=`cat /etc/version | awk -F. '{print $1}'`
 		OS_VERSION_MINOR=`cat /etc/version | awk -F. '{print $2}'`
 		OS_VERSION_REVISION=`cat /etc/version | awk -F. '{print $3}'`
 
 		if [ ${OS_VERSION_MAJOR} != "2" ] || [ ${OS_VERSION_MINOR} -lt "3" ]; then
-            echo "Pfsense ile birlikte calisir"
+            echo "Skyron ile birlikte calisir"
             exit
 		fi
 		else
-		    echo "Lutfen pfsense  sistem ile calistiriniz."
+		    echo "Lutfen Skyron sistem ile calistiriniz."
 	fi
 	else
-        echo "Lutfen pfsense ile calistiriniz. Calisan Sistem Pfsense Degil "
+        echo "Lutfen skyron ile calistiriniz. Calisan Sistem Skyron Degil "
         exit
 fi
 }
@@ -196,9 +196,9 @@ _activeRepos() {
     echo -n ${L_ACTIVEREPOS} 1>&3
     tar xv -C / -f /usr/local/share/pfSense/base.txz ./usr/bin/install
     if [ ${OS_VERSION_MINOR} -lt "4" ]; then
-        sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/etc/pkg/repos/pfSense.conf
+        sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/etc/pkg/repos/skyron.conf
     else
-        sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/share/pfSense/pkg/repos/pfSense-repo.conf
+        sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/share/skyron/pkg/repos/skyron-repo.conf
     fi
     sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/etc/pkg/repos/FreeBSD.conf
     env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg update
@@ -208,25 +208,25 @@ _activeRepos() {
 _deactiveRepos() {
     echo -n ${L_DEACTIVEREPOS} 1>&3
     if [ ${OS_VERSION_MINOR} -lt "4" ]; then
-        sed -i .bak -e "s/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g" /usr/local/etc/pkg/repos/pfSense.conf
+        sed -i .bak -e "s/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g" /usr/local/etc/pkg/repos/skyron.conf
     else
-        sed -i .bak -e "s/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g" /usr/local/share/pfSense/pkg/repos/pfSense-repo.conf
+        sed -i .bak -e "s/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g" /usr/local/share/skyron/pkg/repos/skyron-repo.conf
     fi
     sed -i .bak -e 's/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g' /usr/local/etc/pkg/repos/FreeBSD.conf
     echo ${L_OK} 1>&3
 }
 
-_pfSenseSettings() {
+_skyronSettings() {
     echo ${L_PFSETTINGS} 1>&3
-    cp imzalaconfig.php /etc/phpshellsessions/pfsenseconfig
-    /usr/local/sbin/pfSsh.php playback pfsenseconfig
+    cp imzalaconfig.php /etc/phpshellsessions/skyronconfig
+    /usr/local/sbin/pfSsh.php playback skyronconfig
     echo ${L_OK} 1>&3
 
 }
 
 _cronInstall() {
 if [ -f /etc/platform ]; then
-    if [ `cat /etc/platform` = "pfSense" ]; then
+    if [ `cat /etc/platform` = "skyron" ]; then
     /usr/local/sbin/pfSsh.php playback listpkg | grep "cron"
     if [ $? == 0 ]
     then
@@ -239,7 +239,7 @@ if [ -f /etc/platform ]; then
     	echo ${L_OK} 1>&3
     fi
 else
-        echo 1>&3 "Lutfen pfsense  sistem ile calistiriniz."
+        echo 1>&3 "Lutfen skyron sistem ile calistiriniz."
 fi
 }
 
@@ -264,7 +264,7 @@ echo ${L_OK} 1>&3
 }
 
 main(){
-_Pfsensemi
+_Skyronmu
 _EkranTemizle
 _Basla
 _DilSec
@@ -273,7 +273,7 @@ _Hazirlik
 _ImzaInstall
 exec 3>&1 1>>${OUTPUT_IMZA_LOG} 2>&1
 #_logtutinstall
-_pfSenseSettings
+_skyronSettings
 _cronInstall
 _TestIslemi
 }
