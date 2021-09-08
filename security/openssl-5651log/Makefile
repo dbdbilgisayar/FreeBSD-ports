@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-PORTNAME=	openssl-5651log
+PORTNAME=	openssl
 PORTVERSION=	1.0.2.20170706
 CATEGORIES=	security
 PKGNAMESUFFIX=	-5651log
