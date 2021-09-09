@@ -30,10 +30,6 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/bck
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/dbprs
-	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA
-	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA/newcerts
-	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA/private
-	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA/ssl
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/imzala
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/install
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/language
@@ -43,6 +39,10 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/pkg
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/tools
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/trlog
+	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA
+	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA/newcerts
+	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA/private
+	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA/ssl
 	${MKDIR} ${STAGEDIR}${DATADIR}
 
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/pkg/*.* \
@@ -51,14 +51,6 @@ do-install:
 	${STAGEDIR}${PREFIX}/5651log/conf
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/dbprs/*.*  \
 	${STAGEDIR}${PREFIX}/5651log/dbprs
-        ${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/*.*  \
-        ${STAGEDIR}${PREFIX}/5651log/CA
-        ${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/newcerts/*.*  \
-        ${STAGEDIR}${PREFIX}/5651log/CA/newcerts
-        ${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/private/*.*  \
-        ${STAGEDIR}${PREFIX}/5651log/CA/private
-        ${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/ssl/*.*  \
-        ${STAGEDIR}${PREFIX}/5651log/CA/ssl
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/imzala/*.*  \
 	${STAGEDIR}${PREFIX}/5651log/imzala
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/install/*.*  \
@@ -89,7 +81,18 @@ do-install:
 
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/www/imzalar/*.php \
 		${STAGEDIR}${PREFIX}/www/imzalar
-		
+
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/*.* \
+		${STAGEDIR}${PREFIX}/5651log/CA
+
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/newcerts/*.* \
+		${STAGEDIR}${PREFIX}/5651log/CA/newcerts
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/private/*.* \
+		${STAGEDIR}${PREFIX}/5651log/CA/private
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/ssl/*.* \
+		${STAGEDIR}${PREFIX}/5651log/CA/ssl
+
+
 	${INSTALL_DATA} ${FILESDIR}${DATADIR}/info.xml \
 		${STAGEDIR}${DATADIR}
 

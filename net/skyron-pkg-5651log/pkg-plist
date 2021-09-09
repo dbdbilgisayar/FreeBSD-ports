@@ -22,7 +22,6 @@ www/imzalar/skl5651log_cron_edit.php
 5651log/CA/serial.old
 5651log/CA/tsacert.pem
 5651log/CA/tsaserial
-5651log/CA/newcerts
 5651log/CA/newcerts/010F.pem
 5651log/CA/private/cakey.pem
 5651log/CA/private/tsakey.pem
@@ -72,7 +71,4 @@ www/imzalar/skl5651log_cron_edit.php
 /etc/inc/priv/5651log.priv.inc
 %%DATADIR%%/info.xml
 @dir /etc/inc/priv
-@dir /usr/local/5651log/CA
-@dir /usr/local/5651log/CA/newcerts
-@dir /usr/local/5651log/CA/private
-@dir /usr/local/5651log/CA/ssl
+
