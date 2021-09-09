@@ -47,6 +47,14 @@ do-install:
 	${STAGEDIR}${PREFIX}/5651log/conf
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/dbprs/*.*  \
 	${STAGEDIR}${PREFIX}/5651log/dbprs
+        ${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/*.*  \
+        ${STAGEDIR}${PREFIX}/5651log/CA
+        ${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/newcerts/*.*  \
+        ${STAGEDIR}${PREFIX}/5651log/CA/newcerts
+        ${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/private/*.*  \
+        ${STAGEDIR}${PREFIX}/5651log/CA/private
+        ${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/ssl/*.*  \
+        ${STAGEDIR}${PREFIX}/5651log/CA/ssl
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/imzala/*.*  \
 	${STAGEDIR}${PREFIX}/5651log/imzala
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/install/*.*  \
