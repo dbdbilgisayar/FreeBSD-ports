@@ -30,6 +30,10 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/bck
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/conf
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/dbprs
+	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA
+	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA/newcerts
+	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA/private
+	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/CA/ssl
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/imzala
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/install
 	${MKDIR} ${STAGEDIR}${PREFIX}/5651log/language
