@@ -20,7 +20,7 @@ cd /usr/local/5651log/imzala
 . imzala.inc
 . ../language/lang_tr.inc
 
-_Pfsensemi(){
+_skyronmu(){
 # kullanıcı root mu?
 if [ ${USER} != "root" ]; then
         echo "Please login \"root\" user. Not \"admin\" user !"
@@ -28,7 +28,7 @@ if [ ${USER} != "root" ]; then
 fi
 # Pfsense  flatformu mu ?
 if [ -f /etc/platform ]; then
-	if [ `cat /etc/platform` = "pfSense" ]; then
+	if [ `cat /etc/platform` = "skyron" ]; then
 		OS_NAME=pfSense
 		OS_VERSION=`cat /etc/version`
 		OS_VERSION_MAJOR=`cat /etc/version | awk -F. '{print $1}'`
@@ -36,14 +36,14 @@ if [ -f /etc/platform ]; then
 		OS_VERSION_REVISION=`cat /etc/version | awk -F. '{print $3}'`
 
 		if [ ${OS_VERSION_MAJOR} != "2" ] || [ ${OS_VERSION_MINOR} -lt "3" ]; then
-            echo "Pfsense ile birlikte calisir"
+            echo "Skyron ile birlikte calisir"
             exit
 		fi
 		else
-		    echo "Lutfen pfsense  sistem ile calistiriniz."
+		    echo "Lutfen skyron  sistem ile calistiriniz."
 	fi
 	else
-        echo "Lutfen pfsense ile calistiriniz. Calisan Sistem Pfsense Degil "
+        echo "Lutfen skyron ile calistiriniz. Calisan Sistem Skyron Degil "
         exit
 fi
 }
@@ -165,7 +165,7 @@ _trlog(){
 
 main(){
 _Banner
-_Pfsensemi
+_skyronmu
 _SuAn
 _EkranTemizle
 _Basla

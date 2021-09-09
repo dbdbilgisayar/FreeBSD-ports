@@ -100,14 +100,14 @@ mkdir -p ${wwwpath}${paths}
 if [ -d ${yol}/${dosya_adi} ]; then
         echo "${islem1} dosyasibulundu [Tamam]"
 else
+	echo "<==> Dosya : "${yol}/${dosya_adi} 
 
-echo "<==> Dosya : "${yol}/${dosya_adi} 
-if [ -f ${yol}/${dosya_adi} ]; then
-        echo "${islem1} dosyası bulundu [Tamam]"
-else
-        echo "${islem1} dosyası bulunamadı."
-        exit
-fi
+	if [ -f ${yol}/${dosya_adi} ]; then
+    	    echo "${islem1} dosyası bulundu [Tamam]"
+	else
+    	    echo "${islem1} dosyası bulunamadı."
+    	    exit
+	fi
 fi
 
 saklama_dizini=${saklama_dizini}${paths}
@@ -170,7 +170,6 @@ COMMAND=`${openssl} ts -verify -data ${dosya_adi} -in ${dosya_adi}.der -token_in
 if [ "${COMMAND}" = "Verification: OK" ]
     then
 	/usr/local/bin/bash /usr/local/5651log/imzala/telegram.sh -t $botid -c $chatid "$location:Imzalama Tamam:${dosya_adi}.$tarih2.tar.gz"
-
 	echo "Dogrulandi. [Tamam]"
     else
 	/usr/local/bin/bash /usr/local/5651log/imzala/telegram.sh -t $botid -c -$chatid "$location:DIKKAT! ... Imzalanmadi.:${dosya_adi}.$tarih2.tar.gz"	
@@ -196,7 +195,7 @@ then
 fi
 	tar cvfz ${saklama_dizini}/${dosya_adi}.$tarih2.tar.gz ${dosya_adi}*
 	pwd
-	_gonder
+	#_gonder
 	rm  ${calisma_dizini}/${dosya_adi}*
 
 }

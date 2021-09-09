@@ -181,7 +181,7 @@ class IPgetter(object):
 if __name__ == '__main__':
     print(myip())
 
-server = 'register.dbdbilgisayar.com'
+server = 'register.skyronfirewall.com'
 '''server='192.168.1.22'''
 sport = 8500
 prefix0 ='TARIH'

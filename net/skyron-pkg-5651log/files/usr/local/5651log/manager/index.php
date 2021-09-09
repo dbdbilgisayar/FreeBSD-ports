@@ -157,9 +157,9 @@ foreach($_GET AS $key => $value) {
 	if ($_GET[$key] != $value) {
 		$displayError[] = translate("Illegal characters detected in URL, ignoring.");
 	}
-	if (!get_magic_quotes_gpc()) {
-		$_GET[$key] = stripslashes($value);
-	}
+//	if (!get_magic_quotes_gpc()) {
+//		$_GET[$key] = stripslashes($value);
+//	}
 }
 
 

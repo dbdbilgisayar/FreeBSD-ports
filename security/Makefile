@@ -417,6 +417,7 @@
     SUBDIR += openssl-devel
     SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
+    SUBDIR += openssl-5651log
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas
     SUBDIR += openvpn

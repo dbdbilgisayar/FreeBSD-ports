@@ -8,7 +8,7 @@
 # */
 
 #echo "/usr/local/bin/mysql_secure_installation"
-VERSION="2.4.4"
+VERSION="2.5.2"
 echo ${OS_NAME}":"${OS_VERSION}
 START_PATH=${PWD}
 touch ${START_PATH}/event.log
@@ -30,9 +30,9 @@ _activeRepos() {
     echo ${OS_VERSION_MINOR}
     if [ ${OS_VERSION_MINOR} -lt "4" ]; then
 	
-        sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/etc/pkg/repos/pfSense.conf
+        sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/etc/pkg/repos/skyron.conf
     else
-        sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/share/pfSense/pkg/repos/pfSense-repo.conf
+        sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/share/skyron/pkg/repos/skyron-repo.conf
     fi
     sed -i .bak -e "s/FreeBSD: { enabled: no/FreeBSD: { enabled: yes/g" /usr/local/etc/pkg/repos/FreeBSD.conf
     env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg update
@@ -42,9 +42,9 @@ _activeRepos() {
 _deactiveRepos() {
     echo -n ${L_DEACTIVEREPOS} 1>&3
     if [ ${OS_VERSION_MINOR} -lt "4" ]; then
-        sed -i .bak -e "s/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g" /usr/local/etc/pkg/repos/pfSense.conf
+        sed -i .bak -e "s/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g" /usr/local/etc/pkg/repos/skyron.conf
     else
-        sed -i .bak -e "s/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g" /usr/local/share/pfSense/pkg/repos/pfSense-repo.conf
+        sed -i .bak -e "s/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g" /usr/local/share/skyron/pkg/repos/skyron-repo.conf
     fi
     sed -i .bak -e 's/FreeBSD: { enabled: yes/FreeBSD: { enabled: no/g' /usr/local/etc/pkg/repos/FreeBSD.conf
     echo ${L_OK} 1>&3
@@ -74,9 +74,9 @@ if [ ! -f ${PWD}/restarted ]; then
     ARCH=$(uname -m | sed 's/x86_//;s/i[3-6]86/32/')
     if [ ${ARCH} == "amd64" ]
     then
-    env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg install git wget nano mc htop mysql56-server compat8x-amd64 php72-mysqli-7.2.10 php72-pdo_mysql php72-soap py27-ujson-1.35 py27-netaddr-0.7.19 py27-mysql-connector-python2-2.2.2
+    env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg install git wget nano mc htop mysql57-server compat8x-amd64 php74-mysqli php74-pdo_mysql php74-soap py27-ujson py27-netaddr py27-mysql-connector-python
     else
-    env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg install git wget nano mc htop mysql56-server compat8x-i386 php72-mysqli php72-pdo_mysql php72-soap py27-ujson-1.35 py27-netaddr-0.7.19 py27-mysql-connector-python2-2.2.2
+    env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg install git wget nano mc htop mysql57-server compat8x-i386 php74-mysqli php74-pdo_mysql php74-soap py27-ujson-1.35 py27-netaddr-0.7.19 py27-mysql-connector-python2-2.2.2
     fi
     hash -r
     echo ${L_OK} 1>&3
@@ -101,23 +101,21 @@ _mysqlSettings() {
     if [ ! -f /etc/rc.conf.local ] || [ $(grep -c mysql_enable /etc/rc.conf.local) -eq 0 ]; then
         echo 'mysql_enable="YES"' >> /etc/rc.conf.local
     fi
-    mv /usr/local/etc/rc.d/mysql-server /usr/local/etc/rc.d/mysql-server.sh
-    sed -i .bak -e 's/mysql_enable="NO"/mysql_enable="YES"/g' /usr/local/etc/rc.d/mysql-server.sh
-    service mysql-server.sh start
     echo ${L_OK} 1>&3
 
     # MySQL root kullanicisi tanimlaniyor.
-    echo -n ${L_MYSQLROOT} 1>&3
-    mysqladmin -u root password "${QH_MYSQL_ROOT_PASS}"
-    echo ${L_OK} 1>&3
+    #echo -n ${L_MYSQLROOT} 1>&3
+    #mysqladmin -u root password "${QH_MYSQL_ROOT_PASS}"
+    #echo ${L_OK} 1>&3
 
     # MySQL veritabani yukleniyor
     echo -n ${L_MYSQLINSERTS} 1>&3
     cat <<EOF > /usr/local/5651log/mysql/install/client.cnf
 [client]
-user = ${QH_MYSQL_ROOT_NAME}
-password = ${QH_MYSQL_ROOT_PASS}
-host = localhost
+user=${QH_MYSQL_ROOT_NAME}
+#password=${QH_MYSQL_ROOT_PASS}
+password=$(tail -n 1 /root/.mysql_secret)
+host=localhost
 EOF
     sed -i .bak -e "s/{MYSQL_ROOT_NAME}/$QH_MYSQL_ROOT_NAME/g" /usr/local/5651log/mysql/install/mysqllog.sql
     sed -i .bak -e "s/{MYSQL_ROOT_PASS}/$QH_MYSQL_ROOT_PASS/g" /usr/local/5651log/mysql/install/mysqllog.sql

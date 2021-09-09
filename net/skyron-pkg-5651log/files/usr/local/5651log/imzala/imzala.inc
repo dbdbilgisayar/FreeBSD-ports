@@ -37,12 +37,12 @@ TSAPublicKEY=${imzala_path}/CA/tsacert.pem
 openssl=/usr/local/5651log/bin/openssl
 openssl_conf=/usr/local/5651log/conf/openssl.cnf
 
-#echo "pfsense" >../CA/password.txt
-#password=$(<../CA/password.txt)
+#echo "skyron" >../CA/password.txt
+#password=$(cat ../CA/password.txt)
 #echo "$password"
-password="pfsense"
+password="skyron"
 
-eposta_adresi=info@dbdbilgisayar.com
+eposta_adresi=info@skyronfirewall.com
 
 #ftp sunucu
 

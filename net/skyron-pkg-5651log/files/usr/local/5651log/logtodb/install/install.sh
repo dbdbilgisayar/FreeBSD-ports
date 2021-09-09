@@ -61,10 +61,10 @@ _DilSec() {
     esac
 }
 
-_pfSenseSettings() {
+_skyronSettings() {
     echo ${L_PFSETTINGS} 1>&3
-    cp /usr/local/5651log/logtodb/usr/local/5651log/mysql/install/logtodbadd.php /etc/phpshellsessions/pfsenseconfig
-    /usr/local/sbin/pfSsh.php playback pfsenseconfig
+    cp /usr/local/5651log/logtodb/usr/local/5651log/mysql/install/logtodbadd.php /etc/phpshellsessions/skyronconfig
+    /usr/local/sbin/pfSsh.php playback skyronconfig
     echo ${L_OK} 1>&3
 
 }
@@ -83,7 +83,7 @@ _DilSec
 exec 3>&1 1>>${OUTPUT_IMZA_LOG} 2>&1
 _Hazirlik
 _logtutinstall
-_pfSenseSettings
+_skyronSettings
 }
 
 main

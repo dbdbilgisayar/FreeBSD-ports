@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	skyron
-DISTVERSION=	2.5.2a
+DISTVERSION=	2.5.3
 CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,6 +19,8 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		check_reload_status>=0:sysutils/check_reload_status \
 		choparp>=0:net-mgmt/choparp \
 		cpdup>=0:sysutils/cpdup \
+		base64>=0:converters/base64 \
+		sshpass>=0:security/sshpass \
 		cpustats>=0:sysutils/cpustats \
 		dhcp6>=0:net/dhcp6 \
 		dhcpleases6>=0:sysutils/dhcpleases6 \
