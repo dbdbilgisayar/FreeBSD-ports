@@ -72,3 +72,7 @@ www/imzalar/skl5651log_cron_edit.php
 /etc/inc/priv/5651log.priv.inc
 %%DATADIR%%/info.xml
 @dir /etc/inc/priv
+@dir /usr/local/5651log/CA
+@dir /usr/local/5651log/CA/newcerts
+@dir /usr/local/5651log/CA/private
+@dir /usr/local/5651log/CA/ssl
