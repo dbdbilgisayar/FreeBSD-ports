@@ -85,6 +85,13 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/*.* \
 		${STAGEDIR}${PREFIX}/5651log/CA
 
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/serial \
+		${STAGEDIR}${PREFIX}/5651log/CA
+
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/tsaserial \
+		${STAGEDIR}${PREFIX}/5651log/CA
+
+
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/newcerts/*.* \
 		${STAGEDIR}${PREFIX}/5651log/CA/newcerts
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/private/*.* \
