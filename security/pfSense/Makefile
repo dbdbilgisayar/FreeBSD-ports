@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	skyron
-DISTVERSION=	2.5.3
+DISTVERSION=	2.5.4
 CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
