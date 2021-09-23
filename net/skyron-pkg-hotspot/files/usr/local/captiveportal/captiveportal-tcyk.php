@@ -87,7 +87,7 @@ try {
 
 
 	 }else {
-			echo 0,", T.C Kimlik Numarasi Dogrulanmadı."; 	
+			echo "0",", T.C Kimlik Numarasi Dogrulanmadı."; 	
 	 }
 
 }catch (Exception $hata){
