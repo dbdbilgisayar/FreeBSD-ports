@@ -1,0 +1,132 @@
+        a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+        * {outline: none;}
+        body {font-family: 'Titillium Web', sans-serif; line-height: 100%;}
+        
+		a:link {
+		text-decoration: none;
+		color: #000000;
+		font-size: 15px;
+		}
+		.accordion {
+            position: relative;
+            display: block;
+            width: 290px; height: auto;
+            margin: 50px auto;
+            padding: 10px 30px;
+            border: 1px solid #585858;
+            border-radius: 15px;
+            box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+            background-color:#fff;
+        }
+        .accordion small {
+            display: block;
+            text-align: center;
+            font-size: 15px;
+        }
+        .tabs {
+            position: relative;
+            display: block;
+            margin: 10px 0;
+        }
+        .tabs > div {
+            position: relative;
+            display: block;
+            margin: 5px 0;
+        }
+        .tabs > div h1 {
+            position: relative;
+            display: block;
+            text-align: center;
+            background: #37308a;
+            color: #fff;
+            font-size: 16px;
+            padding: 15px 0;
+            cursor: pointer;
+            border-radius:15px;
+        }
+		.accordion > div#sonuc {
+            position: relative;
+            display: block;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+		.tabs > div #sonuca {
+			font-size:12pt;
+			font-family:Arial;
+			font-weight:bold;
+			font-style:italic;
+			color:#23238e;
+			text-align: center;
+		}
+		
+        .tabs > div .content {display: none; padding: 15px 0;}
+        .tabs > div.active .content {display: block;}
+        .tabs > div input {
+            position: relative;
+            display: block;
+        }
+        .tabs > div img {
+            display: block;
+            margin: 15px 30 20px;
+        }
+        .tabs > div input[type="text"],
+        .tabs > div input[type="password"] {
+            display: block;
+            width: 94%;
+            padding: 15px 8px;
+            margin: 5px auto;
+            border: none;
+            background: #d2b465;
+            font: 16px 'Titillium Web', sans-serif;
+            color: #333;
+            border-radius:15px;
+        }
+        .tabs > div#vouncher input[type="text"] {width: 140px; text-align: center;}
+        ::-webkit-input-placeholder {color: #fff;}
+        :-moz-placeholder {color: #fff;}
+        ::-moz-placeholder {color: #fff;}
+        :-ms-input-placeholder {color: #fff;}
+        
+		.tabs > div input[type="submit"] {
+            display: block;
+            padding: 8px 15px;
+            margin: 15px 0px;
+            border: none;
+            background: #cdcdcd;
+            font: 14px 'Titillium Web', sans-serif;
+            color: #333;
+            cursor: pointer;
+            border-radius:10px;
+            width:100px;
+
+        }
+		
+
+		.tabs > div#mm {
+			font-size:12pt;
+			font-family:Arial;
+			font-weight:bold;
+			font-style:italic;
+			color:#23238e;
+			text-align: center;
+			float:none;
+		}
+		
+		.tabs > div p {
+			font-size:12pt;
+			font-family:Arial;
+			font-weight:bold;
+			font-style:italic;
+			color:#23238e;
+			text-align: center;			
+		}
+		
+		div#unuttum{
+		    padding: 8px 15px;
+            margin: 15px 0px;
+            border: none;
+            background: #cdcdcd;
+			border-radius:10px;
+			text-align: center;
+		}

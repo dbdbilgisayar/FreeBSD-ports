@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<skyronpkgs>
+	<package>
+		<name>Hotspot</name>
+		<descr><![CDATA[hotspot® 
+Hotspot, Captive portal Internet baglantısını paylaşmaya yarayan bir teknolojidir.
+Aynı zamanda Internet trafigini kontrol altında tutmanızı saglar.
+https://www.skyronfirewall.com/
+				]]></descr>
+		<pkginfolink>https://github.com/dbdbilgisayar/skyron-pkg-hotspot</pkginfolink>
+		<version>%%PKGVERSION%%</version>
+		<configurationfile>hotspot.xml</configurationfile>
+	</package>
+</skyronpkgs>

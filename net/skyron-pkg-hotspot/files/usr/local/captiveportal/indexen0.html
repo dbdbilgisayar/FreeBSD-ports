@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    	
+	<!-- Metas -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=360px, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="captiveportal-favicon.ico"> 
+    <link rel="stylesheet" type="text/css" href="css/captiveportal.css" />
+	<script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/captiveportal-arkaresim.js"></script>
+		
+		
+	<script>
+		/*! http://mths.be/placeholder v2.0.7 by @mathias */
+		!function(a,b,c){function l(a){var b={},d=/^jQuery\d+$/;return c.each(a.attributes,function(a,c){c.specified&&!d.test(c.name)&&(b[c.name]=c.value)}),b}function m(a,b){var d=this,e=c(d);if(d.value==e.attr("placeholder")&&e.hasClass("placeholder"))if(e.data("placeholder-password")){if(e=e.hide().next().show().attr("id",e.removeAttr("id").data("placeholder-id")),a===!0)return e[0].value=b;e.focus()}else d.value="",e.removeClass("placeholder"),d==o()&&d.select()}function n(){var a,b=this,d=c(b),e=this.id;if(""==b.value){if("password"==b.type){if(!d.data("placeholder-textinput")){try{a=d.clone().attr({type:"text"})}catch(f){a=c("<input>").attr(c.extend(l(this),{type:"text"}))}a.removeAttr("name").data({"placeholder-password":d,"placeholder-id":e}).bind("focus.placeholder",m),d.data({"placeholder-textinput":a,"placeholder-id":e}).before(a)}d=d.removeAttr("id").hide().prev().attr("id",e).show()}d.addClass("placeholder"),d[0].value=d.attr("placeholder")}else d.removeClass("placeholder")}function o(){try{return b.activeElement}catch(a){}}var j,k,d="[object OperaMini]"==Object.prototype.toString.call(a.operamini),e="placeholder"in b.createElement("input")&&!d,f="placeholder"in b.createElement("textarea")&&!d,g=c.fn,h=c.valHooks,i=c.propHooks;e&&f?(k=g.placeholder=function(){return this},k.input=k.textarea=!0):(k=g.placeholder=function(){var a=this;return a.filter((e?"textarea":":input")+"[placeholder]").not(".placeholder").bind({"focus.placeholder":m,"blur.placeholder":n}).data("placeholder-enabled",!0).trigger("blur.placeholder"),a},k.input=e,k.textarea=f,j={get:function(a){var b=c(a),d=b.data("placeholder-password");return d?d[0].value:b.data("placeholder-enabled")&&b.hasClass("placeholder")?"":a.value},set:function(a,b){var d=c(a),e=d.data("placeholder-password");return e?e[0].value=b:d.data("placeholder-enabled")?(""==b?(a.value=b,a!=o()&&n.call(a)):d.hasClass("placeholder")?m.call(a,!0,b)||(a.value=b):a.value=b,d):a.value=b}},e||(h.input=j,i.value=j),f||(h.textarea=j,i.value=j),c(function(){c(b).delegate("form","submit.placeholder",function(){var a=c(".placeholder",this).each(m);setTimeout(function(){a.each(n)},10)})}),c(a).bind("beforeunload.placeholder",function(){c(".placeholder").each(function(){this.value=""})}))}(this,document,jQuery);
+
+		$(function() {
+			$("input, textarea").placeholder();
+			$(".tabs > div h1").click(function() {
+				var cla = $(this).parent("div").attr("class");
+				if ( cla != "active" ) {
+					$(".tabs > div .content").stop(true).slideUp(250).parent("div").removeClass("active");
+					$(this).next(".content").stop(true).slideDown(250);
+				}
+			});
+		});
+	</script>
+
+
+	<script type="text/javascript">
+            $(document).ready(function(){
+                $('body').abDegisenArkaPlan({
+                    resimlerArasiGecis  : 10000,
+                    resimEfekleri       : 5000,
+                    resimler       :"resim/1.jpg,resim/2.jpg,resim/3.jpg,resim/4.jpg,resim/5.jpg,resim/6.jpg"
+                });
+            });
+    </script>
+    
+</head>
+<body id="page">
+	<div class="accordion">
+		<div class="tabs">
+		
+            <a href="http://192.168.4.2:8002/?zone=hspot"><img  alt="" src="captiveportal-turkey.png" /></a>
+
+            <a href="captiveportal-indexen.html"><img src="captiveportal-english.png"  alt="" border="0" /></a>
+
+
+			<center><img src="resim/logo.png" alt="" id="logo"></center>
+			<div id="tel">
+                <h1>Register With Telefon Number</h1>
+                <div class="content">
+                    <p>For access to the Internet are recorded pursuant to Law No. 5651.<br></p>
+					<p>6698 KVKK. Your personal information will only be used for your internet access. <br></p>
+                    <p>Please fill in the form below and like our Telefon Number. If you are approved, your credentials will be logged into the system automatically.
+</p>
+                    <form action="captiveportal-telen.php" name="telilesorgu" id="telilesorgu">
+                        <input type="text" name="telefon" placeholder="Telefon No Ör:0536xxxxxxx">
+                        <input type="text" name="email" placeholder="E-mail Ör:info@site.com.tr">                        
+                        <input type="submit" id="telsorgu"  value="Gönder"><div id="sorgu"></div>
+                    </form>
+                </div>
+            </div>
+            <div id="tc">
+                <h1>Register With TC Kimlik Number </h1>
+                <div class="content">
+                    <p>For access to the Internet are recorded pursuant to Law No. 5651.<br></p>
+					<p>6698 KVKK. Your personal information will only be used for your internet access. <br></p>
+                    <p>Please fill in the form below exactly as it is in your nationality card in your with UPPER CASE.</p>
+                    <form action="captiveportal-tc.php" name="tcilesorgu" id="tcilesorgu">
+                        <input type="text" name="tc" placeholder="TC Kimlik No">
+                        <input type="text" name="ad" placeholder="NAME">
+                        <input type="text" name="soyad" placeholder="SURNAME">
+                        <input type="text" name="dogum" placeholder="Burn Year">
+                        <input type="text" name="telefon" placeholder="Telefon No Ör:0536xxxxxxx">
+                        <input type="text" name="email" placeholder="E-mail Ör:info@site.com.tr">
+                        
+                        <input type="submit" id="tcsorgu"  value="Gönder"><div id="sorgu"></div>
+                    </form>
+                </div>
+            </div>
+            <div id="login" class="active">
+				<h1>Login With User Name And Password</h1>
+				<div class="content">
+				<div id="sonuca"></div>
+					<form method="post" action="http://192.168.4.2:8002/?zone=hspot" id="f">
+						<input type="text" name="auth_user" id="u" placeholder="Your User Name">
+						<input type="password" name="auth_pass" id="p" placeholder="Your Password">
+						<input type="hidden" name="redirurl"  id="c" >
+						<input type="submit" name="accept"  id="basgonder" value="Login">
+					</form>
+				</div>
+				
+			</div>
+				<div id="mm">
+					<small><a href="captiveportal-uyari.php">For access to the Internet are recorded pursuant to Law No. 5651.</a><br> 
+					<a href="mailto:info@skyronfirewall.com?Subject=Bilgi%20talebi" target="_top" style="color: rgb(255,0,0)">Skyron</a><a href="http://www.skyronfirewall.com?id=1" style="color: rgb(255,0,0)"> Security</a></small>
+				</div>
+			</div>
+	</div>
+
+
+
+<script>
+		$( "#unuttum" ).click(function() {
+		window.open('captiveportal-reminder.html', '_self');
+		});
+		
+		
+		$("#telsorgu").click(function(e)
+		{
+			
+			$('#telsorgu').val('SMS Gonder...').delay(1000).prop('disabled', true); 
+			var postData = $('#telilesorgu').serializeArray();
+			var formURL = $('#telilesorgu').attr("action");
+			$.ajax(
+			{
+				url : formURL,
+				type: "POST",
+				data : postData,
+				success:function(data) 
+				{
+					var datam = data.split(',');
+					var smsm = datam[0];
+					var user = datam[1];
+					var pass = datam[2];
+					var hata = datam[3];
+					var hatirla = 'Username:'+ user +'<br> Password:'+ pass;
+					
+					$("#sonuc").html(data);
+					$("#sonuca").html(hata);
+					
+						if(user == 0){
+							$('#telsorgu').val('Gönder').delay(100).prop('disabled', false); 
+							$('#u').val(hata);
+							alert('Error your data.\n please try again.');
+						} else {
+							alert("Created Username And Password. \n login please Username And Password");
+							$('#u').val(user);
+							//$('#p').val(pass);
+							//$("#sonuca").html(hatirla);
+							$('.tabs > div .content').slideUp();
+						    //$('.tabs > div .content').slideToggle();
+						    $('.tabs > div#login .content').slideDown();
+						    
+														
+						}
+
+				},
+				error: function(jqXHR, textStatus, errorThrown) 
+				{
+					 alert("İletişim sorunu bilgiler gönderilemedi!. \n Lütfen kapsam alını içinde olunuz. Data not found");
+   
+				}
+			});
+			e.preventDefault(); 
+		});		
+		
+		$("#tcsorgu").click(function(e)
+		{
+			
+			$('#tcsorgu').val('Dogrulanıyor...').delay(1000).prop('disabled', true); 
+			var postData = $('#tcilesorgu').serializeArray();
+			var formURL = $('#tcilesorgu').attr("action");
+			$.ajax(
+			{
+				url : formURL,
+				type: "POST",
+				data : postData,
+				success:function(data) 
+				{
+					var datam = data.split(',');
+					var user = datam[0];
+					var pass = datam[1];
+					var hata = datam[2];
+					var errk = datam[3];
+					var hatirla = 'Username:'+ user +'<br> Password:'+ pass;
+					
+					//$("#sonuc").html(data);
+					$("#sonuca").html(hata);
+					
+					if(user == 3){
+						$('#tcsorgu').val('Gönder').delay(100).prop('disabled', false); 
+						$('#u').val(hata);
+						alert('There is T.C Kimlik Number for person. \n Please correct username and password for login.');
+						$('#u').val(errk);
+						$('.tabs > div .content').slideToggle();
+					} else {
+				
+						if(user == 0){
+							$('#tcsorgu').val('Gönder').delay(100).prop('disabled', false); 
+							$('#u').val(hata);
+							alert('Error your data.\n please try again.');
+						} else {
+							alert("Created Username And Password. \n login please Username and Password");
+							$('#u').val(user);
+							//$('#p').val(pass);
+							//$("#sonuca").html(hatirla);
+							$('.tabs > div#tel .content').slideDown();
+							$('.tabs > div .content').slideToggle();
+							
+						}
+					}
+				},
+				error: function(jqXHR, textStatus, errorThrown) 
+				{
+					 alert("İletişim sorunu bilgiler gönderilemedi!. \n Lütfen kapsam alını içinde olunuz. Data not found");
+   
+				}
+			});
+			e.preventDefault(); 
+		});
+		
+
+    
+    
+		</script>
+		
+		
+
+</body>
+</html>

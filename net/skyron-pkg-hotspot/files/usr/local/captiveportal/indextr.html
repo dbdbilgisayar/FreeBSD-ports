@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    	
+	<!-- Metas -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=360px, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="resim/skyron.ico"> 
+    <link rel="stylesheet" type="text/css" href="css/captiveportal.css" />
+	<script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/captiveportal-arkaresim.js"></script>
+		
+		
+	<script>
+		/*! http://mths.be/placeholder v2.0.7 by @mathias */
+		!function(a,b,c){function l(a){var b={},d=/^jQuery\d+$/;return c.each(a.attributes,function(a,c){c.specified&&!d.test(c.name)&&(b[c.name]=c.value)}),b}function m(a,b){var d=this,e=c(d);if(d.value==e.attr("placeholder")&&e.hasClass("placeholder"))if(e.data("placeholder-password")){if(e=e.hide().next().show().attr("id",e.removeAttr("id").data("placeholder-id")),a===!0)return e[0].value=b;e.focus()}else d.value="",e.removeClass("placeholder"),d==o()&&d.select()}function n(){var a,b=this,d=c(b),e=this.id;if(""==b.value){if("password"==b.type){if(!d.data("placeholder-textinput")){try{a=d.clone().attr({type:"text"})}catch(f){a=c("<input>").attr(c.extend(l(this),{type:"text"}))}a.removeAttr("name").data({"placeholder-password":d,"placeholder-id":e}).bind("focus.placeholder",m),d.data({"placeholder-textinput":a,"placeholder-id":e}).before(a)}d=d.removeAttr("id").hide().prev().attr("id",e).show()}d.addClass("placeholder"),d[0].value=d.attr("placeholder")}else d.removeClass("placeholder")}function o(){try{return b.activeElement}catch(a){}}var j,k,d="[object OperaMini]"==Object.prototype.toString.call(a.operamini),e="placeholder"in b.createElement("input")&&!d,f="placeholder"in b.createElement("textarea")&&!d,g=c.fn,h=c.valHooks,i=c.propHooks;e&&f?(k=g.placeholder=function(){return this},k.input=k.textarea=!0):(k=g.placeholder=function(){var a=this;return a.filter((e?"textarea":":input")+"[placeholder]").not(".placeholder").bind({"focus.placeholder":m,"blur.placeholder":n}).data("placeholder-enabled",!0).trigger("blur.placeholder"),a},k.input=e,k.textarea=f,j={get:function(a){var b=c(a),d=b.data("placeholder-password");return d?d[0].value:b.data("placeholder-enabled")&&b.hasClass("placeholder")?"":a.value},set:function(a,b){var d=c(a),e=d.data("placeholder-password");return e?e[0].value=b:d.data("placeholder-enabled")?(""==b?(a.value=b,a!=o()&&n.call(a)):d.hasClass("placeholder")?m.call(a,!0,b)||(a.value=b):a.value=b,d):a.value=b}},e||(h.input=j,i.value=j),f||(h.textarea=j,i.value=j),c(function(){c(b).delegate("form","submit.placeholder",function(){var a=c(".placeholder",this).each(m);setTimeout(function(){a.each(n)},10)})}),c(a).bind("beforeunload.placeholder",function(){c(".placeholder").each(function(){this.value=""})}))}(this,document,jQuery);
+
+		$(function() {
+			$("input, textarea").placeholder();
+			$(".tabs > div h1").click(function() {
+				var cla = $(this).parent("div").attr("class");
+				if ( cla != "active" ) {
+					$(".tabs > div .content").stop(true).slideUp(250).parent("div").removeClass("active");
+					$(this).next(".content").stop(true).slideDown(250);
+				}
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+            $(document).ready(function(){
+                $('body').abDegisenArkaPlan({
+                    resimlerArasiGecis  : 10000,
+                    resimEfekleri       : 5000,
+                    resimler       :"resim/1.jpg,resim/2.jpg,resim/3.jpg,resim/4.jpg,resim/5.jpg,resim/6.jpg"
+                });
+            });
+    </script>
+        
+
+</head>
+<body id="page">
+	<div class="accordion">
+		<div class="tabs">
+			<center><img src="resim/logo.png" alt="" id="logo"></center>
+ 	         <div id="onay">
+                <h1>Bilgilendirme Onay. </h1>
+                <div class="content">             
+            <center>        <p>5651 Nolu yasa geregi internet erişiminiz kayıt altına alınacaktır.<br></p>
+					<p>6698 Nolu KVKK. geregi kişisel bilgileriniz sadece internet erişiminiz için kullanılacaktır. <br></p>
+
+            <br><p>Sistemde Günceleme yapılmıştır.<br> Yeniden kayıt olunuz.<br></p> </center>   
+               </div>
+            </div>
+            
+	         <div id="tc">
+                <h1>TC Kimlik İle Kayıt Ol. </h1>
+                <div class="content">             
+                    <p>Lütfen aşağıdaki formu nüfus cüzdanınızdaki gibi ADINIZ SOYADINIZ BÜYÜK HARFLE dogru bir şekilde eksiksiz doldurunuz.</p>
+                    <form action="captiveportal-tc.php" name="tcilesorgu" id="tcilesorgu">
+                        <input type="text" name="tc" placeholder="TC Kimlik No">
+                        <input type="text" name="ad" placeholder="ADINIZ">
+                        <input type="text" name="soyad" placeholder="SOYADINIZ">
+                        <input type="text" name="dogum" placeholder="Doğum Yılı">
+                        <input type="text" name="telefon" placeholder="Telefon No Ör:0536xxxxxxx">
+                        <input type="text" name="email" placeholder="E-mail Ör:info@site.com.tr">
+                        <input type="submit" id="tcsorgu"  value="Gönder"><div id="sorgu"></div>
+                    </form>
+                </div>
+            </div>
+
+	         <div id="ytc">
+                <h1>Yabancı TC Kimlik İle Kayıt Ol. </h1>
+                <div class="content">             
+                    <p>5651 Nolu yasa geregi internet erişiminiz kayıt altına alınacaktır.<br></p>
+					<p>6698 Nolu KVKK. geregi kişisel bilgileriniz sadece internet erişiminiz için kullanılacaktır. <br></p>
+                    <p>Lütfen aşağıdaki formu nüfus cüzdanınızdaki gibi ADINIZ SOYADINIZ BÜYÜK HARFLE dogru bir şekilde eksiksiz doldurunuz.</p>
+                    <form action="captiveportal-ytc.php" name="tcilesorgu" id="tcilesorgu">
+                        <input type="text" name="tc" placeholder="TC Kimlik No">
+                        <input type="text" name="ad" placeholder="ADINIZ">
+                        <input type="text" name="soyad" placeholder="SOYADINIZ">
+                        <input type="text" name="dogum_gun" placeholder="Doğum Gun">
+                        <input type="text" name="dogum_ay" placeholder="Dogum Ay">
+                        <input type="text" name="dogum_yil" placeholder="Doğum Yılı">
+                        <input type="text" name="telefon" placeholder="Telefon No Ör:0536xxxxxxx">
+                        <input type="text" name="email" placeholder="E-mail Ör:info@site.com.tr">
+                        <input type="submit" id="tcsorgu"  value="Gönder"><div id="sorgu"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="login" class="active">
+				<h1>Kullanıcı Adı İle Giriş Yap</h1>
+				<div class="content">
+				<div id="sonuca"></div>
+					<form method="post" action="$PORTAL_ACTION$" id="f">
+						<input type="text" name="auth_user" id="u" placeholder="Kullanıcı Adınız">
+						<input type="password" name="auth_pass" id="p" placeholder="Şifreniz">
+						<input type="hidden" name="redirurl"  id="c" >
+						<input type="submit" name="accept"  id="basgonder" value="Giriş Yap">
+					</form>
+				</div>
+			</div>
+				<div id="mm">
+					<small><a href="captiveportal-uyari.php">İnternet erişimleriniz 5651 sayılı kanun gereğince kayıt altına alınmaktadır.</a><br> 
+					<a href="mailto:info@skyronfirewall.com?Subject=Bilgi%20talebi" target="_top" style="color: rgb(255,0,0)">Skyron</a><a href="http://www.skyronfirewall.com?id=1" style="color: rgb(255,0,0)"> Security</a></small>
+				</div>
+			</div>
+	</div>
+
+
+
+<script>
+		$( "#unuttum" ).click(function() {
+		window.open('captiveportal-reminder.html', '_self');
+		});
+		
+		
+		$("#telsorgu").click(function(e)
+		{
+			
+			$('#telsorgu').val('SMS Gonder...').delay(1000).prop('disabled', true); 
+			var postData = $('#telilesorgu').serializeArray();
+			var formURL = $('#telilesorgu').attr("action");
+			$.ajax(
+			{
+				url : formURL,
+				type: "POST",
+				data : postData,
+				success:function(data) 
+				{
+					var datam = data.split(',');
+					var smsm = datam[0];
+					var user = datam[1];
+					var pass = datam[2];
+					var hata = datam[3];
+					var hatirla = 'kullanıcı adı:'+ user +'<br> Şifre:'+ pass;
+					
+					$("#sonuc").html(data);
+					$("#sonuca").html(hata);
+					
+						if(user == 0){
+							$('#telsorgu').val('Gönder').delay(100).prop('disabled', false); 
+							$('#u').val(hata);
+							alert('Bilgilerinizde bir yanlışlık soz konusu.\n Lutfen tekrar deneyiniz.');
+						} else {
+							alert("Bilgiler Doğru ve kaydınız oluşturuldu. \n Veilen kullanıcı adı ve şifre ile giriş yapınız");
+							$('#u').val(user);
+							//$('#p').val(pass);
+							//$("#sonuca").html(hatirla);
+							$('.tabs > div .content').slideUp();
+						    //$('.tabs > div .content').slideToggle();
+						    $('.tabs > div#login .content').slideDown();
+						    
+														
+						}
+
+				},
+				error: function(jqXHR, textStatus, errorThrown) 
+				{
+					 alert("İletişim sorunu bilgiler gönderilemedi!. \n Lütfen kapsam alını içinde olunuz. Data not found");
+   
+				}
+			});
+			e.preventDefault(); 
+		});		
+		
+		$("#tcsorgu").click(function(e)
+		{
+			
+			$('#tcsorgu').val('Dogrulanıyor...').delay(1000).prop('disabled', true); 
+			var postData = $('#tcilesorgu').serializeArray();
+			var formURL = $('#tcilesorgu').attr("action");
+			$.ajax(
+			{
+				url : formURL,
+				type: "POST",
+				data : postData,
+				success:function(data) 
+				{
+					var datam = data.split(',');
+					var user = datam[0];
+					var pass = datam[1];
+					var hata = datam[2];
+					var errk = datam[3];
+					
+					//$("#sonuc").html(data);
+					$("#sonuca").html(hata);
+					
+					if(user == 3){
+						$('#tcsorgu').val('Gönder').delay(100).prop('disabled', false); 
+						$('#u').val(hata);
+						alert('T.C Kimlik Numarasi ile abonelik kaydı var. \n Lütfen geçerli kullanıcı ve şifre ile giriş yapınız.');
+						$('#u').val(errk);
+						$('.tabs > div .content').slideToggle();
+					} else {
+				
+						if(user == 0){
+							$('#tcsorgu').val('Gönder').delay(100).prop('disabled', false); 
+							$('#u').val(hata);
+							alert('Bilgilerinizde bir yanlışlık soz konusu.\n Lutfen tekrar deneyiniz.');
+						} else {
+							alert("Bilgiler Doğru ve kaydınız oluşturuldu. \n Veilen kullanıcı adı ve şifre ile giriş yapınız");
+							$('#u').val(user);
+							$('.tabs > div .content').slideToggle();
+														
+							
+						}
+					}
+				},
+				error: function(jqXHR, textStatus, errorThrown) 
+				{
+					 alert("İletişim sorunu bilgiler gönderilemedi!. \n Lütfen kapsam alını içinde olunuz. Data not found");
+   
+				}
+			});
+			e.preventDefault(); 
+		});
+		
+
+    
+    
+		</script>
+		
+		
+
+</body>
+</html>
