@@ -56,8 +56,8 @@ echo "==>Password olusturma.."
 # Sertifika icin rasgele sifre olusturuyoruz
 touch ${CA_PATH}/password.txt
 #openssl rand -base64 32 > ${CA_PATH}/password.txt
-echo "pfsense">../CA/password.txt
-echo "paassword.txt:"
+echo "skyron">../CA/password.txt
+echo "password.txt:"
 cat ${CA_PATH}/password.txt
 echo "==>[TAMAM]"
 }
