@@ -2,7 +2,7 @@
 
 PORTNAME=	skyron-pkg-WPAD
 PORTVERSION=	0.3.0.3
-CATEGORIES=	www
+CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty

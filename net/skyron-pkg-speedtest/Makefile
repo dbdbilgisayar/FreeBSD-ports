@@ -3,7 +3,7 @@
 PORTNAME=	skyron-pkg-SpeedTest
 PORTVERSION=	0.1
 PORTREVISION=	4
-CATEGORIES=	www
+CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
