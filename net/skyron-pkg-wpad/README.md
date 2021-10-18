@@ -1,8 +1,8 @@
 # Wpad packages for skyron software
 
-As many people knows, Netgate has trimed a lot of packages from official repo since skyron® 2.5. 
+As many people knows, Hraklet has trimed a lot of packages from official repo since skyron® 2.5. 
 
-This repo updates some packages for newer pfSense software versions with manual procedure installs.
+This repo updates some packages for newer skyron software versions with manual procedure installs.
 
 Feedbacks and contributions are always welcome.
 
