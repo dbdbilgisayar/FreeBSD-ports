@@ -1,14 +1,14 @@
 # $FreeBSD$
 
-PORTNAME=	pfSense-pkg-Squidanalyzer
-PORTVERSION=	0.2.1
+PORTNAME=	skyron-pkg-squidanalyzer
+PORTVERSION=	1.0
 CATEGORIES=	www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
-MAINTAINER=	marcellocoutinho@gmail.com
-COMMENT=	pfSense Unofficial wpad package
+MAINTAINER=	coreteam@skyronfirewall.com
+COMMENT=	skyron squidanalyzer package
 
 LICENSE=	APACHE20
 

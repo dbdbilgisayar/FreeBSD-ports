@@ -1,14 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	skyron
-DISTVERSION=	2.5.4
+DISTVERSION=	2.5.5
 CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
 MAINTAINER=	coreteam@skyronfirewall.com
-COMMENT?=	Meta package to install Skyron required ports
+COMMENT?=	Meta package to install skyron required ports
 
 LICENSE=	APACHE20
 
