@@ -1,8 +1,8 @@
 # $FreeBSD$
 
-PORTNAME=	skyron-pkg-WPAD
+PORTNAME=	skyron-pkg-wpad
 PORTVERSION=	1.0
-CATEGORIES=	net
+CATEGORIES=	www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
