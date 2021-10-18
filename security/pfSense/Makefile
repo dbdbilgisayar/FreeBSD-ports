@@ -65,6 +65,8 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		skyron-pkg-5651log>=0:net/skyron-pkg-5651log \
 		skyron-pkg-e2guardian5>=:www/skyron-pkg-e2guardian5 \
 		skyron-pkg-hotspot>=:net/skyron-pkg-hotspot \
+		skyron-pkg-speedtest>:net/skyron-pkg-speedtest \
+		skyron-pkg-wpad>:net/skyron-pkg-wpad \
 		php74-soap>=0:net/php74-soap \
 		pftop>=0:sysutils/pftop \
 		php74-mysqli>=0:databases/php74-mysqli \
