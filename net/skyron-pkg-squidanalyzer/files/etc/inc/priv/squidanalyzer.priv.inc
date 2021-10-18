@@ -3,8 +3,9 @@
 /*
  * squidanalyzer.priv.inc
  *
- * part of Unofficial packages for pfSense(R) softwate
+ * part of packages for skyron(R) softwate
  * Copyright (c) 2017 Marcello Coutinho
+ * Copyright (c) 2005-2021 Heraklet Bilisim
  * All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
