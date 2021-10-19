@@ -29,13 +29,13 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/www
 	${MKDIR} ${STAGEDIR}/etc/inc/priv
 	${MKDIR} ${STAGEDIR}${DATADIR}
-	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/www/diag_speedtest.php \
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/www/diag_speedtest.php \
 		${STAGEDIR}${PREFIX}/www
-	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/pkg/speedtest.xml \
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/pkg/speedtest.xml \
 		${STAGEDIR}${PREFIX}/pkg
 	${INSTALL_DATA} ${FILESDIR}/etc/inc/priv/speedtest.priv.inc \
 		${STAGEDIR}/etc/inc/priv
-	${INSTALL_DATA} -m 0644 ${FILESDIR}${DATADIR}/info.xml \
+	${INSTALL_DATA} ${FILESDIR}${DATADIR}/info.xml \
 		${STAGEDIR}${DATADIR}
 	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
 		${STAGEDIR}${DATADIR}/info.xml
