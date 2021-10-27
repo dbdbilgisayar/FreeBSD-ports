@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	skyron
-DISTVERSION=	2.5.5
+DISTVERSION=	2.5.2
 CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -42,11 +42,11 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		miniupnpd>=0:net/miniupnpd \
 		mobile-broadband-provider-info>=0:net/mobile-broadband-provider-info \
 		mpd5>=0:net/mpd5 \
-		mysql57-server>=0:databases/mysql57-server \
+#		mysql57-server>=0:databases/mysql57-server \
 		nginx>=0:www/nginx \
 		ntp>=0:net/ntp \
 		openvpn>=0:security/openvpn \
-		openssl-5651log>=0:security/openssl-5651log \
+#		openssl-5651log>=0:security/openssl-5651log \
 		${PHP_PKGNAMEPREFIX}openssl_x509_crl>=0:security/php-openssl_x509_crl@${PHP_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}pear-Auth_RADIUS>=0:net/pear-Auth_RADIUS@${PHP_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}pear-Crypt_CHAP>=0:security/pear-Crypt_CHAP@${PHP_FLAVOR} \
@@ -57,20 +57,21 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		${PHP_PKGNAMEPREFIX}simplepie>=0:www/simplepie@${PHP_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}pfSense-module>=0:devel/php-pfSense-module@${PHP_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}phpseclib>=0:security/phpseclib@${PHP_FLAVOR} \
-		pfSense-pkg-freeradius3>=0:net/pfSense-pkg-freeradius3 \
+#		pfSense-pkg-freeradius3>=0:net/pfSense-pkg-freeradius3 \
 		pfSense-pkg-Cron>=0:sysutils/pfSense-pkg-Cron \
 		pfSense-Status_Monitoring>=0:sysutils/pfSense-Status_Monitoring@${PHP_FLAVOR} \
 		pfSense-repo>=0:sysutils/pfSense-repo \
 		pfSense-upgrade>=0:sysutils/pfSense-upgrade \
-		skyron-pkg-5651log>=0:net/skyron-pkg-5651log \
-		skyron-pkg-e2guardian5>=:www/skyron-pkg-e2guardian5 \
+#		skyron-pkg-5651log>=0:net/skyron-pkg-5651log \
+#		skyron-pkg-e2guardian5>=:www/skyron-pkg-e2guardian5 \
 		skyron-pkg-hotspot>=:net/skyron-pkg-hotspot \
 		skyron-pkg-speedtest>:www/skyron-pkg-speedtest \
-		skyron-pkg-wpad>:www/skyron-pkg-wpad \
+#		skyron-pkg-wpad>:www/skyron-pkg-wpad \
 		php74-soap>=0:net/php74-soap \
 		pftop>=0:sysutils/pftop \
 		php74-mysqli>=0:databases/php74-mysqli \
 		qstats>=0:sysutils/qstats \
+		htop>=0:sysutils/htop \
 		radvd>=0:net/radvd \
 		rate>=0:net-mgmt/rate \
 		scponly>=0:shells/scponly \
