@@ -3,8 +3,8 @@
 	<package>
 		<name>Hotspot</name>
 		<descr><![CDATA[hotspot® 
-Hotspot, Captive portal Internet baglantısını paylaşmaya yarayan bir teknolojidir.
-Aynı zamanda Internet trafigini kontrol altında tutmanızı saglar.
+Hotspot, Captive portal Internet baglantisini paylasmaya yarayan bir teknolojidir.
+Ayni zamanda Internet trafigini kontrol altinda tutmanizi saglar.
 https://www.skyronfirewall.com/
 				]]></descr>
 		<pkginfolink>https://github.com/dbdbilgisayar/skyron-pkg-hotspot</pkginfolink>

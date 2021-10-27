@@ -5,7 +5,6 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
-
 MAINTAINER=	mdemir@skyronfirewall.com
 COMMENT=	skyron package 5651log
 
@@ -91,14 +90,12 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/tsaserial \
 		${STAGEDIR}${PREFIX}/5651log/CA
 
-
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/newcerts/*.* \
 		${STAGEDIR}${PREFIX}/5651log/CA/newcerts
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/private/*.* \
 		${STAGEDIR}${PREFIX}/5651log/CA/private
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/5651log/CA/ssl/*.* \
 		${STAGEDIR}${PREFIX}/5651log/CA/ssl
-
 
 	${INSTALL_DATA} ${FILESDIR}${DATADIR}/info.xml \
 		${STAGEDIR}${DATADIR}
