@@ -1329,5 +1329,5 @@
     SUBDIR += zeronet
     SUBDIR += zxid
     SUBDIR += zzuf
-
+    SUBDIR += skyron
 .include <bsd.port.subdir.mk>

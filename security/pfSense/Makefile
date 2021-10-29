@@ -104,7 +104,7 @@ USE_PHP=	bz2 bcmath ctype curl dom filter gettext intl json mbstring \
 NO_BUILD=	yes
 NO_MTREE=	yes
 
-CONFLICTS=	pfSense-vmware-[0-9]*
+CONFLICTS=	skyron-vmware-[0-9]*
 
 PLIST_FILES=	/etc/version.patch
 PLIST_DIRS=	/etc
