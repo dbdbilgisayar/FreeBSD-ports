@@ -11,7 +11,7 @@ COMMENT=	skyron package 5651log
 LICENSE=	APACHE20
 
 RUN_DEPENDS=	bash>0:shells/bash \
-		openssl-5651log>=0:security/openssl-5651log \
+		skyron-pkg-openssl>=0:security/skyron-pkg-openssl \
 
 NO_BUILD=	yes
 NO_MTREE=	yes

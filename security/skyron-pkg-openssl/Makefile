@@ -15,7 +15,7 @@ CPE_VERSION=	1.0.2k
 
 USES=		cpe perl5
 USE_PERL5=	build
-MAKE_ENV+=	LIBRPATH="${PREFIX}/skyron-openssl/lib" GREP_OPTIONS= SHLIBVER=${OPENSSL_SHLIBVER}
+MAKE_ENV+=	LIBRPATH="${PREFIX}/skyron-pkg-openssl/lib" GREP_OPTIONS= SHLIBVER=${OPENSSL_SHLIBVER}
 CFLAGS+=	-fPIC -DPIC
 SUB_FILES=	pkg-message
 PLIST_SUB+=	SHLIBVER=${OPENSSL_SHLIBVER}
@@ -40,7 +40,7 @@ CONFIGURE_ARGS=	enable-camellia enable-cms enable-ec enable-ec2m \
 CONFIGURE_ARGS+=	enable-ec_nistp_64_gcc_128
 .endif
 
-OPENSSLDIR?=	${PREFIX}/skyron-openssl/etc
+OPENSSLDIR?=	${PREFIX}/skyron-pkg-openssl/etc
 PLIST_SUB+=	OPENSSLDIR=${OPENSSLDIR:S=^${PREFIX}/==}
 
 .include "version.mk"
@@ -55,9 +55,9 @@ do-configure:
 		${WRKSRC}/config
 	cd ${WRKSRC} \
 	&& ${SETENV} CC="${CC}" FREEBSDCC="${CC}" CFLAGS="${CFLAGS}" PERL="${PERL}" \
-	./config --prefix=${PREFIX}/skyron-openssl --openssldir=${OPENSSLDIR} \
+	./config --prefix=${PREFIX}/skyron-pkg-openssl --openssldir=${OPENSSLDIR} \
 		--install_prefix=${STAGEDIR} \
-		-L${PREFIX}/skyron-openssl/lib ${CONFIGURE_ARGS}
+		-L${PREFIX}/skyron-pkg-openssl/lib ${CONFIGURE_ARGS}
 
 post-configure:
 	${REINPLACE_CMD} \
