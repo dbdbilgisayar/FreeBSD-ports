@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<pfsensepkgs>
+<skyronpkgs>
 	<package>
 		<name>SpeedTest</name>
 		<descr><![CDATA[Command line interface for testing internet bandwidth using speedtest.net]]></descr>
@@ -7,4 +7,4 @@
 		<version>%%PKGVERSION%%</version>
 		<configurationfile>speedtest.xml</configurationfile>
 	</package>
-</pfsensepkgs>
+</skyronpkgs>

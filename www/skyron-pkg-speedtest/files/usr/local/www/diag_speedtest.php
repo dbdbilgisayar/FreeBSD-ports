@@ -2,10 +2,10 @@
 /*
  * diag_speedtest.php
  *
- * part of skyron (https://www.skyronfirewall.com)
+ * part of pfSense (https://www.pfsense.org)
  * Copyright (c) 2004-2018 Rubicon Communications, LLC (Netgate)
  * Copyright (c) 2003-2005 Bob Zoller (bob@kludgebox.com)
- * Copyright (c) 2005-2021 Heraklet Bilisim
+ * Copyright (c) 2005-2021 MDemir Heraklet Bilisim.
  * All rights reserved.
  *
  * originally based on m0n0wall (http://m0n0.ch/wall)

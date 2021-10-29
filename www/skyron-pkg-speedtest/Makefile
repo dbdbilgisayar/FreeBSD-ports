@@ -1,6 +1,6 @@
 # $FreeBSD$
 
-PORTNAME=	skyron-pkg-speedtest
+PORTNAME=	skyron-pkg-SpeedTest
 PORTVERSION=	1.0
 PORTREVISION=	4
 CATEGORIES=	www
@@ -27,13 +27,19 @@ do-extract:
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/pkg
 	${MKDIR} ${STAGEDIR}${PREFIX}/www
+	${MKDIR} -p ${STAGEDIR}${PREFIX}/www/widgets/widgets
 	${MKDIR} ${STAGEDIR}/etc/inc/priv
+
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/www/diag_speedtest.php \
 		${STAGEDIR}${PREFIX}/www
+
+	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/www/widgets/widgets/skyron_speedtest.widget.php \
+		${STAGEDIR}${PREFIX}/www/widgets/widgets
+
 	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/pkg/speedtest.xml \
 		${STAGEDIR}${PREFIX}/pkg
-	${INSTALL_DATA} -m 0644 ${FILESDIR}/etc/inc/priv/speedtest.priv.inc \
+	${INSTALL_DATA} ${FILESDIR}/etc/inc/priv/speedtest.priv.inc \
 		${STAGEDIR}/etc/inc/priv
 	${INSTALL_DATA} -m 0644 ${FILESDIR}${DATADIR}/info.xml \
 		${STAGEDIR}${DATADIR}

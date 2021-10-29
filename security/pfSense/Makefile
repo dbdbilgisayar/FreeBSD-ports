@@ -63,8 +63,9 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		pfSense-repo>=0:sysutils/pfSense-repo \
 		pfSense-upgrade>=0:sysutils/pfSense-upgrade \
 		skyron-pkg-5651log>=0:net/skyron-pkg-5651log \
-		skyron-pkg-e2guardian5>=:www/skyron-pkg-e2guardian5 \
-		skyron-pkg-hotspot>=:net/skyron-pkg-hotspot \
+		skyron-pkg-e2guardian5>=0:www/skyron-pkg-e2guardian5 \
+		skyron-pkg-hotspot>=0:net/skyron-pkg-hotspot \
+		skyron-pkg-speedtest>=0:www/skyron-pkg-speedtest \
 		php74-soap>=0:net/php74-soap \
 		pftop>=0:sysutils/pftop \
 		php74-mysqli>=0:databases/php74-mysqli \
