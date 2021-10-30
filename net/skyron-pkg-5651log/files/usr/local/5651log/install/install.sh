@@ -33,7 +33,7 @@ fi
 echo "<=== openssl sembolik linki olusturuluyor."
 mkdir -p /usr/local/5651log/bin/
 rm /usr/local/5651log/bin/openssl
-ln -s /usr/local/openssl-5651log/bin/openssl /usr/local/5651log/bin/openssl
+ln -s /usr/local/skyron-pkg-openssl/bin/openssl /usr/local/5651log/bin/openssl
 
 echo "<=== Web yonetim paneli hazirlaniyor..."
 mkdir -p /usr/local/www/imzalar
