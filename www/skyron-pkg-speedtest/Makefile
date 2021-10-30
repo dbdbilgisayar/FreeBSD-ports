@@ -29,23 +29,20 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/www
 	${MKDIR} -p ${STAGEDIR}${PREFIX}/www/widgets/widgets
 	${MKDIR} ${STAGEDIR}/etc/inc/priv
-
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/www/diag_speedtest.php \
 		${STAGEDIR}${PREFIX}/www
-
 	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/www/widgets/widgets/skyron_speedtest.widget.php \
 		${STAGEDIR}${PREFIX}/www/widgets/widgets
-
-	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/pkg/speedtest.xml \
+	${INSTALL_DATA} -m 0777 ${FILESDIR}${PREFIX}/pkg/speedtest.xml \
 		${STAGEDIR}${PREFIX}/pkg
-	${INSTALL_DATA} ${FILESDIR}/etc/inc/priv/speedtest.priv.inc \
+	${INSTALL_DATA} -m 0777 ${FILESDIR}/etc/inc/priv/speedtest.priv.inc \
 		${STAGEDIR}/etc/inc/priv
-	${INSTALL_DATA} -m 0644 ${FILESDIR}${DATADIR}/info.xml \
+	${INSTALL_DATA} -m 0777 ${FILESDIR}${DATADIR}/info.xml \
 		${STAGEDIR}${DATADIR}
 	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
 		${STAGEDIR}${DATADIR}/info.xml
-#	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
-#		${FILESDIR}${PREFIX}/pkg/speedtest.xml
+	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
+		${FILESDIR}${PREFIX}/pkg/speedtest.xml
 
 .include <bsd.port.mk>
