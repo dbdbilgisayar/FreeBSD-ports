@@ -30,10 +30,11 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/captiveportal/js
 	${MKDIR} ${STAGEDIR}${PREFIX}/captiveportal/resim
 	${MKDIR} ${STAGEDIR}${PREFIX}/captiveportal/sql
+	${MKDIR} ${STAGEDIR}${PREFIX}/captiveportal/skyron
 	${MKDIR} ${STAGEDIR}${DATADIR}
-	
-	${INSTALL_DATA} ${FILESDIR}${PREFIX}/captiveportal/*.* \
-	${STAGEDIR}${PREFIX}/captiveportal
+
+	${INSTALL_DATA} ${FILESDIR}${PREFIX}/captiveportal/skyron/*.* \
+	${STAGEDIR}${PREFIX}/captiveportal/skyron
 
 	${INSTALL_DATA} ${FILESDIR}${PREFIX}/captiveportal/css/*.* \
 	${STAGEDIR}${PREFIX}/captiveportal/css
@@ -57,6 +58,5 @@ do-install:
 	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
 		${STAGEDIR}${DATADIR}/info.xml \
 		${STAGEDIR}${PREFIX}/pkg/sklhotspot.inc
-
 
 .include <bsd.port.mk>

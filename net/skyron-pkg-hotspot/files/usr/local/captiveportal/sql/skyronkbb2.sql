@@ -81,7 +81,7 @@ CREATE TABLE `systems` (
 
 /*Data for the table `systems` */
 
-insert  into `systems`(`Id`,`Prm1`,`Prm2`,`Prm3`,`Prm4`,`Prm5`,`Prm6`,`Prm7`,`Prm8`,`Prm9`,`Prm10`,`Prsvr`,`Ipsvr`,`Pcont`) values (1,1,'10800','90','kayseriotp-mb1237','9477','0','0','0','0','0',NULL,'','http://gateway.mobilus.net/com');
+insert  into `systems`(`Id`,`Prm1`,`Prm2`,`Prm3`,`Prm4`,`Prm5`,`Prm6`,`Prm7`,`Prm8`,`Prm9`,`Prm10`,`Prsvr`,`Ipsvr`,`Pcont`) values (1,1,'10800','90','skyron','skyron','0','0','0','0','0',NULL,'','');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

@@ -1,5 +1,5 @@
 PORTNAME=	skyron-pkg-WireGuard
-PORTVERSION=	1.0.1
+PORTVERSION=	2.5.2
 CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
