@@ -50,5 +50,6 @@ do-install:
 	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
 		${STAGEDIR}${DATADIR}/info.xml
 	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
-	${STAGEDIR}/usr/local/pkg/wpad.xml
+#	${STAGEDIR}/usr/local/pkg/wpad.xml
+	${FILESDIR}${PREFIX}/pkg/wpad.xml
 .include <bsd.port.mk>
