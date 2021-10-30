@@ -1,6 +1,6 @@
 # $FreeBSD$
 
-PORTNAME=	skyron-pkg-SpeedTest
+PORTNAME=	skyron-pkg-speedtest
 PORTVERSION=	1.0
 PORTREVISION=	4
 CATEGORIES=	www
