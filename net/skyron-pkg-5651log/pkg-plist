@@ -68,6 +68,7 @@ www/imzalar/skl5651log_cron_edit.php
 5651log/imzala_log.sh
 5651log/install.me
 5651log/version.sk
+5651log/test.sh
 /etc/inc/priv/5651log.priv.inc
 %%DATADIR%%/info.xml
 @dir /etc/inc/priv
