@@ -25,21 +25,21 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/pkg
 	${MKDIR} ${STAGEDIR}/etc/inc/priv
 	${MKDIR} ${STAGEDIR}${DATADIR}
-	${INSTALL_DATA} -m 0777 ${FILESDIR}${PREFIX}/pkg/wpad.xml \
+	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/pkg/wpad.xml \
 		${STAGEDIR}${PREFIX}/pkg
-	${INSTALL_DATA} -m 0777 ${FILESDIR}${PREFIX}/pkg/wpad_sync.xml \
+	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/pkg/wpad_sync.xml \
 		${STAGEDIR}${PREFIX}/pkg
-	${INSTALL_DATA} -m 0777 ${FILESDIR}/etc/inc/priv/wpad.priv.inc \
+	${INSTALL_DATA} -m 0644 ${FILESDIR}/etc/inc/priv/wpad.priv.inc \
 		${STAGEDIR}/etc/inc/priv
-	${INSTALL_DATA} -m 0777 ${FILESDIR}${PREFIX}/pkg/wpad.inc \
+	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/pkg/wpad.inc \
 		${STAGEDIR}${PREFIX}/pkg
-	${INSTALL_DATA} -m 0777${FILESDIR}${PREFIX}/pkg/wpad_nginx.template \
+	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/pkg/wpad_nginx.template \
 		${STAGEDIR}${PREFIX}/pkg
-	${INSTALL_DATA} -m 0777 ${FILESDIR}${PREFIX}/pkg/wpad_script.template \
+	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/pkg/wpad_script.template \
 		${STAGEDIR}${PREFIX}/pkg
-	${INSTALL_DATA} -m 0777 ${FILESDIR}${PREFIX}/pkg/wpad_index.template \
+	${INSTALL_DATA} -m 0644 ${FILESDIR}${PREFIX}/pkg/wpad_index.template \
 		${STAGEDIR}${PREFIX}/pkg
-	${INSTALL_DATA} -m 0777 ${FILESDIR}${DATADIR}/info.xml \
+	${INSTALL_DATA} -m 0644 ${FILESDIR}${DATADIR}/info.xml \
 		${STAGEDIR}${DATADIR}
 
 	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
