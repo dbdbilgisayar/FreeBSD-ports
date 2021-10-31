@@ -71,7 +71,8 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		php74-mysqli>=0:databases/php74-mysqli \
 		qstats>=0:sysutils/qstats \
 		htop>=0:sysutils/htop \
-		opencart>0:www/opencart \
+		opencart>=0:www/opencart \
+		composer>=0:devel/php-composer \
 		radvd>=0:net/radvd \
 		rate>=0:net-mgmt/rate \
 		scponly>=0:shells/scponly \
