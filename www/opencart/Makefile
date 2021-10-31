@@ -8,7 +8,8 @@ MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Open source PHP-based online shopping cart system
 
 LICENSE=	GPLv3
-
+RUN_DEPENDS=	bash>0:shells/bash \
+		php74-composer>0:devel/php74-composer
 USE_GITHUB=	yes
 GH_ACCOUNT=	opencart
 
