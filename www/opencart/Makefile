@@ -9,6 +9,8 @@ COMMENT=	Open source PHP-based online shopping cart system
 
 LICENSE=	GPLv3
 
+RUN_DEPENDS=	php74-composer2>0:devel/php-composer2 
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	opencart
 
