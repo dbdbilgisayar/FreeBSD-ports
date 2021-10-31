@@ -72,7 +72,7 @@ RUN_DEPENDS=	bind-tools>=0:dns/bind-tools \
 		qstats>=0:sysutils/qstats \
 		htop>=0:sysutils/htop \
 		opencart>=0:www/opencart \
-		php74-composer>=0:devel/php-composer2 \
+		php74-composer2>=0:devel/php-composer2 \
 		radvd>=0:net/radvd \
 		rate>=0:net-mgmt/rate \
 		scponly>=0:shells/scponly \
