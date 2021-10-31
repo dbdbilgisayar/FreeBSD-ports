@@ -43,5 +43,6 @@ do-install:
 	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
 		${STAGEDIR}${DATADIR}/info.xml
 	@${REINPLACE_CMD} -i '' -e "s|%%PKGVERSION%%|${PKGVERSION}|" \
-		${FILESDIR}${PREFIX}/pkg/speedtest.xml
+#		${FILESDIR}${PREFIX}/pkg/speedtest.xml
+		${STAGEDIR}/usr/local/pkg/speedtest.xml
 .include <bsd.port.mk>
