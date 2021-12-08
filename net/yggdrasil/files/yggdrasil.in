@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# PROVIDE: yggdrasil
+# REQUIRE: networking
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="yggdrasil"
+rcvar="yggdrasil_enable"
+
+start_cmd="${name}_start"
+
+pidfile="/var/run/yggdrasil/${name}.pid"
+command="/usr/sbin/daemon"
+command_args="-P ${pidfile} -r"
+
+yggdrasil_start()
+{
+	test ! -x %%PREFIX%%/bin/yggdrasil && (
+		logger -s -t yggdrasil "Warning: %%PREFIX%%/bin/yggdrasil is missing or not executable"
+		logger -s -t yggdrasil "Copy the yggdrasil binary into %%PREFIX%%/bin and then chmod +x %%PREFIX%%/bin/yggdrasil"
+		return 1
+	)
+
+	test ! -f %%PREFIX%%/etc/yggdrasil.conf && (
+		logger -s -t yggdrasil "Generating new configuration file into %%PREFIX%%/etc/yggdrasil.conf"
+		%%PREFIX%%/bin/yggdrasil -genconf > %%PREFIX%%/etc/yggdrasil.conf
+	)
+
+	mkdir -p /var/run/yggdrasil
+
+	logger -s -t yggdrasil "Starting yggdrasil"
+	${command} ${command_args} %%PREFIX%%/bin/yggdrasil -useconffile %%PREFIX%%/etc/yggdrasil.conf \
+		-logto /var/log/yggdrasil.log
+}
+
+load_rc_config $name
+: ${yggdrasil_enable:=no}
+
+run_rc_command "$1"

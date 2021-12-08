@@ -1,0 +1,22 @@
+--- filebeat/filebeat.yml.orig	2021-06-10 16:57:09 UTC
++++ filebeat/filebeat.yml
+@@ -95,7 +95,7 @@ filebeat.inputs:
+ 
+ filebeat.config.modules:
+   # Glob pattern for configuration loading
+-  path: ${path.config}/modules.d/*.yml
++  path: ${path.config}/filebeat.modules.d/*.yml
+ 
+   # Set to true to enable config reloading
+   reload.enabled: false
+@@ -205,8 +205,8 @@ processors:
+   - add_host_metadata:
+       when.not.contains.tags: forwarded
+   - add_cloud_metadata: ~
+-  - add_docker_metadata: ~
+-  - add_kubernetes_metadata: ~
++#  - add_docker_metadata: ~
++#  - add_kubernetes_metadata: ~
+ 
+ # ================================== Logging ===================================
+ 

@@ -1,0 +1,66 @@
+--- Makefile.orig	2021-08-16 21:18:43 UTC
++++ Makefile
+@@ -524,16 +524,16 @@ GIT-VERSION-FILE: FORCE
+ 
+ prefix = $(HOME)
+ bindir = $(prefix)/bin
+-mandir = $(prefix)/share/man
+-infodir = $(prefix)/share/info
++mandir = $(prefix)/man
++infodir = $(prefix)/info
+ gitexecdir = libexec/git-core
+ mergetoolsdir = $(gitexecdir)/mergetools
+ sharedir = $(prefix)/share
+-gitwebdir = $(sharedir)/gitweb
+-perllibdir = $(sharedir)/perl5
++gitwebdir = $(sharedir)/examples/git/gitweb
++perllibdir = %%SITE_PERL%%
+ localedir = $(sharedir)/locale
+ template_dir = share/git-core/templates
+-htmldir = $(prefix)/share/doc/git-doc
++htmldir = $(prefix)/share/doc/git
+ ETC_GITCONFIG = $(sysconfdir)/gitconfig
+ ETC_GITATTRIBUTES = $(sysconfdir)/gitattributes
+ lib = lib
+@@ -558,8 +558,8 @@ DIFF = diff
+ TAR = tar
+ FIND = find
+ INSTALL = install
+-TCL_PATH = tclsh
+-TCLTK_PATH = wish
++TCL_PATH ?= tclsh
++TCLTK_PATH ?= wish
+ XGETTEXT = xgettext
+ MSGFMT = msgfmt
+ CURL_CONFIG = curl-config
+@@ -1477,9 +1477,9 @@ EXTLIBS += -lz
+ 
+ ifndef NO_OPENSSL
+ 	OPENSSL_LIBSSL = -lssl
+-	ifdef OPENSSLDIR
+-		BASIC_CFLAGS += -I$(OPENSSLDIR)/include
+-		OPENSSL_LINK = -L$(OPENSSLDIR)/$(lib) $(CC_LD_DYNPATH)$(OPENSSLDIR)/$(lib)
++	ifdef OPENSSLBASE
++		BASIC_CFLAGS += -I$(OPENSSLBASE)/include
++		OPENSSL_LINK = -L$(OPENSSLBASE)/$(lib) $(CC_LD_DYNPATH)$(OPENSSLBASE)/$(lib)
+ 	else
+ 		OPENSSL_LINK =
+ 	endif
+@@ -2376,7 +2376,7 @@ git-instaweb: git-instaweb.sh GIT-SCRIPT-DEFINES
+ 	chmod +x $@+ && \
+ 	mv $@+ $@
+ else # NO_PERL
+-$(SCRIPT_PERL_GEN) git-instaweb: % : unimplemented.sh
++$(SCRIPT_PERL_GEN) git-instaweb git-request-pull: % : unimplemented.sh
+ 	$(QUIET_GEN) \
+ 	sed -e '1s|#!.*/sh|#!$(SHELL_PATH_SQ)|' \
+ 	    -e 's|@@REASON@@|NO_PERL=$(NO_PERL)|g' \
+@@ -2392,7 +2392,7 @@ ifndef NO_PYTHON
+ $(SCRIPT_PYTHON_GEN): GIT-CFLAGS GIT-PREFIX GIT-PYTHON-VARS
+ $(SCRIPT_PYTHON_GEN): % : %.py
+ 	$(QUIET_GEN) \
+-	sed -e '1s|#!.*python|#!$(PYTHON_PATH_SQ)|' \
++	sed -e '1s|#!.*python.*|#!$(PYTHON_PATH_SQ)|' \
+ 	    $< >$@+ && \
+ 	chmod +x $@+ && \
+ 	mv $@+ $@
